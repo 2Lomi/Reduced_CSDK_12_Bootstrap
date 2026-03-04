@@ -1,0 +1,177 @@
+---
+nonImportantHeroes:
+  - heroName: McGinnis
+    referenceName: hero_engineer
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Drifter
+    referenceName: hero_drifter
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Dynamo
+    referenceName: hero_dynamo
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Graves
+    referenceName: hero_necro
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Haze
+    referenceName: hero_haze
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Infernus
+    referenceName: hero_inferno
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Kelvin
+    referenceName: hero_kelvin
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: ladygeist
+    referenceName: hero_ghost
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Mo&Krill
+    referenceName: hero_krill
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Paige
+    referenceName: hero_bookworm
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Rem
+    referenceName: hero_familiar
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Seven
+    referenceName: hero_gigawatt
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Venator
+    referenceName: hero_priest
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Victor
+    referenceName: hero_frank
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Vyper
+    referenceName: hero_viper
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+  - heroName: Warden
+    referenceName: hero_warden
+    stamina: 3
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+importantHeroes:
+  - heroName: Appollo
+    referenceName: fencer
+    staminaRegeneration: 0.001
+  - heroName: Billy
+    referenceName: hero_punkgoat
+    staminaRegeneration: 0.001
+  - heroName: Viscous
+    referenceName: hero_viscous
+    staminaRegeneration: 0.001
+  - heroName: Calico
+    referenceName: hero_nano
+    staminaRegeneration: 0.001
+  - heroName: Celeste
+    referenceName: hero_unicorn
+    staminaRegeneration: 0.001
+  - heroName: Doorman
+    referenceName: hero_doorman
+    staminaRegeneration: 0.001
+  - heroName: Holliday
+    referenceName: hero_astro
+    staminaRegeneration: 0.001
+  - heroName: Lash
+    referenceName: hero_lash
+    staminaRegeneration: 0.001
+  - heroName: Mina
+    referenceName: vampirebat
+    staminaRegeneration: 0.001
+  - heroName: Paradox
+    referenceName: hero_chrono
+    staminaRegeneration: 0.001
+  - heroName: Pocket
+    referenceName: hero_synth
+    staminaRegeneration: 0.001
+nicheUntouchedHeroes:
+  - heroName: Bebop
+    referenceName: hero_bebop
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Grey_Talon
+    referenceName: hero_archer
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Ivy
+    referenceName: hero_tengu
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Shiv
+    referenceName: hero_shiv
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Mirage
+    referenceName: hero_mirage
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Silver
+    referenceName: hero_werewolf
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Sinclair
+    referenceName: hero_magician
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Vindicta
+    referenceName: hero_hornet
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Wraith
+    referenceName: hero_wraith
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Yamato
+    referenceName: hero_yamato
+    stamina: 0
+    staminaRegeneration: 0.000
+  - heroName: Abrams
+    referenceName: hero_atlas
+    stamina: 0
+    staminaRegeneration: 0.000

@@ -1,0 +1,5 @@
+I'm trying to build a .net code that read some KeyValues  type of file (see heroes.vdata file)
+I found this repository ValveResourceFormat that can read the compiled version of Vdata file (.vdata_c)
+
+But in my case, I already decompiled the file and I need to read the simple text version of the file and modify it through code.
+Can you help me find a way to deserialize heroes.vdata file into a working data format available in ValveResourceFormat repository ?

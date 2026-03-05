@@ -2,6 +2,7 @@
 using System.IO.Compression;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -31,11 +32,10 @@ class Program
 
     static async Task Main(string[] args)
     { 
-        Console.WriteLine("YOU'RE ABOUT TO CLEAR UP YOUR WHOLE CSDK FOLDER");
-        Console.WriteLine("STOP NOW ? 5 S !");
-        Thread.Sleep(5000);
-        return;
 
+        Console.WriteLine("YOU'RE ABOUT TO CLEAR UP YOUR WHOLE CSDK FOLDER");
+        Console.WriteLine("STOP NOW ? 5 SEC UNTIL RUN, NO INPUT WE'RE ALL IN!");
+        await Task.Delay(5000);
         if (!await DownloadAndExtractCSDK12Zip()) return;
         EmptyAndExtractCSDK12();
         if (!await DownloadAndExtractDepotDownloader()) return;
@@ -43,6 +43,58 @@ class Program
         await DownloadAndExtractCLISourceViewer2();
         await ExtractCSDKGameCitadelPak01();
         ExtractCSDK12AndOverrideFiles();
+        SwitchQwertyToAzerty(); 
+    }
+
+    private static void SwitchQwertyToAzerty()
+    {
+        string filePath = Path.Combine(DirectoryHelper.FindSingletonProjectRoot(), @"Reduced_CSDK_12\game\core\tools\keybindings\shared_tool_key_bindings.txt");
+      
+        try
+        {
+            // Read the file content
+            string content = File.ReadAllText(filePath);
+
+            // Define the replacements
+            var replacements = new Dictionary<string, string>
+            {
+                // MoveCameraForward3D: W -> Z
+                { @"m_Command = ""MoveCameraForward3D""\s+m_Input = ""W""", @"m_Command = ""MoveCameraForward3D""			m_Input = ""Z""" },
+
+                // MoveCameraLeft3D: A -> Q
+                { @"m_Command = ""MoveCameraLeft3D""\s+m_Input = ""A""", @"m_Command = ""MoveCameraLeft3D""				m_Input = ""Q""" },
+
+                // MouseControlCamera3D_Toggle: Z -> W
+                { @"m_Command = ""MouseControlCamera3D_Toggle""\s+m_Input = ""Z""", @"m_Command = ""MouseControlCamera3D_Toggle""	m_Input = ""W""" },
+
+                // SnapCameraToSelection: Shift+A -> Shift+Q
+                { @"m_Command = ""SnapCameraToSelection""\s+m_Input = ""Shift\+A""", @"m_Command = ""SnapCameraToSelection""			m_Input = ""Shift+Q""" },
+
+                // FitAllInView: Ctrl+Shift+A -> Ctrl+Shift+Q
+                { @"m_Command = ""FitAllInView""\s+m_Input = ""Ctrl\+Shift\+A""", @"m_Command = ""FitAllInView""					m_Input = ""Ctrl+Shift+Q""" }
+            };
+
+            // Apply each replacement
+            foreach (var replacement in replacements)
+            {
+                content = Regex.Replace(content, replacement.Key, replacement.Value);
+            }
+
+            // Write the modified content back to the file
+            File.WriteAllText(filePath, content);
+
+            Console.WriteLine("Key bindings file has been successfully modified!");
+            Console.WriteLine("Changes applied:");
+            Console.WriteLine("  - MoveCameraForward3D: W → Z");
+            Console.WriteLine("  - MoveCameraLeft3D: A → Q");
+            Console.WriteLine("  - MouseControlCamera3D_Toggle: Z → W");
+            Console.WriteLine("  - SnapCameraToSelection: Shift+A → Shift+Q");
+            Console.WriteLine("  - FitAllInView: Ctrl+Shift+A → Ctrl+Shift+Q");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
     }
 
     private static void ClearUpAll()
@@ -97,7 +149,7 @@ class Program
         if (fileCount > 0)
         {
             Console.WriteLine("Reduced_CSDK_12 exists and is not empty. Overriding files...");
-            ZipFile.ExtractToDirectory(REDUCED_CSDK_12_ZIP_PATH, ProjectRoot, overwrite: true);
+            ZipFile.ExtractToDirectory(REDUCED_CSDK_12_ZIP_PATH, ProjectRoot, overwriteFiles: true);
             Console.WriteLine("Extraction override complete!");
         }
     }

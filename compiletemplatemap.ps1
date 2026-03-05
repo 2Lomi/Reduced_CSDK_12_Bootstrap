@@ -6,6 +6,10 @@ Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput\citadel_addons\test\maps
 Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput\citadel_addons\test\maps\template_map9.vpk" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\maps" -Force
 #>
 
+<#move heroes_modified.vdata#>
+
+Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumping_map_script\scripts" -Force
+
 <#move map to game/citadel_addons/<folder>#>
 New-Item -ItemType Directory -Force -Path "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel_addons\jumping_map_script\maps"
 Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput\citadel_addons\jumping_map_map\maps\template_map9.vpk" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel_addons\jumping_map_script\maps" -Force -Recurse
@@ -15,5 +19,3 @@ C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win6
 
 <#package into VPK#>
 C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin\win64\CSDKCfgVPK.exe C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel_addons\jumping_map_script C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\addons\pak01_dir.vpk
-
-

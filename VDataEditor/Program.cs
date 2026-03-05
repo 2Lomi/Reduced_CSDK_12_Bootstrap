@@ -11,6 +11,9 @@ using YamlDotNet.Serialization.NamingConventions;
 using KVObject = ValveResourceFormat.Serialization.KeyValues.KVObject;
 using KVValue = ValveResourceFormat.Serialization.KeyValues.KVValue;
 
+
+
+
 var projectRoot = DirectoryHelper.FindSingletonProjectRoot();
 var configurationFile = Path.Combine(projectRoot, "resources", "heroesmodification.yaml");
 
@@ -20,9 +23,13 @@ var deserializer = new DeserializerBuilder()
 
 var heroModifications = deserializer.Deserialize<HeroModificationCollection>(
     File.ReadAllText(configurationFile));
-
+ 
+ //Todo move the file automatically ()
 var resource = new Resource();
-resource.Read(Path.Combine(projectRoot, "resources", "heroes.vdata_c"));
+var filePath = Path.Combine(new DirectoryInfo(projectRoot).Parent.FullName, @"ConsoleApp1\Reduced_CSDK_12\game\citadel\scripts\heroes.vdata_c");
+using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+resource.Read(stream, verifyFileSize: false);
+
 
 var dataBlock = resource.GetBlockByType(BlockType.DATA) as BinaryKV3;
 

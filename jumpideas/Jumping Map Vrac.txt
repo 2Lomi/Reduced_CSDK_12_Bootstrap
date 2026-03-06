@@ -1,0 +1,343 @@
+resourcecompiler.exe  C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\test\scripts\heroes.vdata
+
+
+https://github.com/SteamDatabase/GameTracking-Deadlock/blob/569284193869de55dc8103c6fb83e9c28a4e72cd/Protobufs/citadel_gcmessages_server.proto
+
+
+Game Event Fired: player_hero_changed
+Game Event Fired: player_level_changed
+Game Event Fired: player_level_changed
+
+
+White lane ?
+White lane ?
+
+citadel_dump_player_stats
+	StatDesc_Stamina - 3
+	StatDesc_StaminaCooldown - 0
+	StatDesc_StaminaRegenPerSecond - 0.22
+	StatDesc_StaminaRegenIncrease - 0
+	StatDesc_StaminaCooldown - 4.50
+	StatDesc_StaminaRegenPercent - 0
+
+
+Viscous Punch/Cube Slope/Ult double jump cancel
+Mina Bat WarpStone
+Lash 
+Holiday
+Celeste bunny hopping
+Appolo dash 3
+Calico dash 2 => Ult reset => Dash 2 
+Paradox 
+Shiv Alt shot
+
+
+
+citadel_player_regen_zone_stamina_regen (150 default)
+
+128
+256
+384
+512
+640
+768
+896
+1024
+1152
+1280
+1408
+1536 
+1664
+
+3 Stamina 
+2.1 Sprint speed
+7.19 Move Speed
+
+384 Units 	= Barely make it + 1 jump + Vaulting
+512 Units 	= Perfect Vault Slide + init jump + Vaulting
+640 Units 	= Perfect Vault Slide + init jump + Vaulting
+768 Units 	= Perfect Vault Slide + init jump + Heavy Melee + Vaulting + Laaaarge
+896 Units 	= Perfect Vault Slide + init jump + Heavy Melee + Vaulting + Close ?
+1024 Units 	= 
+				- Perfect Vault Slide + Init Jump + Dash
+				- Jump + Diagonal Dash + Heavy Melee
+				
+1152 Units = 
+				- Perfect Vault Slide + Init Jump + Dash + Heavy Melee
+				- Jump + Diagonal Dash + Heavy Melee
+				
+				] dump_response_symbols
+========================================
+Printing 156 SV response symbols:
+    0	Concept
+    1	speaker_and_observers
+    2	speaker_only
+    3	gametime_minute
+    4	playerhealthfrac
+    5	enemy_health_percent
+    6	target_health_percent
+    7	current_gold
+    8	is_lowest_networth
+    9	is_target_self
+   10	is_target_enemy
+   11	did_projecitle_hit_world
+   12	did_projectile_hit_enemy
+   13	networth_difference
+   14	revenge
+   15	target_kill_streak
+   16	melee_kill
+   17	classname
+   18	subclass
+   19	distance
+   20	allies_alive
+   21	enemies_alive
+   22	lane
+   23	early_idol
+   24	ultimate
+   25	ability_name
+   26	action
+   27	upgrade_type
+   28	randomnum
+   29	team_networth_diff
+   30	can_buy
+   31	gold_from_objective
+   32	item
+   33	phase_laning_metrics
+   34	phase_power_up
+   35	phase_kill_guardian
+   36	phase_complete
+   37	guide_line
+   38	enemy_t1s_destroyed
+   39	enemy_t2s_destroyed
+   40	net_worth_task_incomplete
+   41	gold_orb_task_incomplete
+   42	red_orb_task_incomplete
+   43	ability_upgrade_task_incomplete
+   44	mod_purchased_task_incomplete
+   45	guided_player_gold
+   46	guided_player_ap
+   47	active_lane
+   48	team_number
+   49	kill_streak
+   50	caster_is_enemy
+   51	caster_distance_to_target
+   52	observer_distance_to_caster
+   53	caster_has_ultimate_ready
+   54	event
+   55	caster_facing_observer
+   56	observer_distance_to_target
+   57	observer_health_pct
+   58	is_carrying_idol
+   59	damage
+   60	move_type
+   61	upgrade_name
+   62	item_tier
+   63	players_affected
+   64	players_killed
+   65	cast_success
+   66	recent_damage_percent
+   67	damage_percent
+   68	healing_percent
+   69	interrupting_ability
+   70	enemy_casting_ability
+   71	conversation_line
+   72	ConversationName
+   73	time_in_enemy_territory
+   74	time_since_near_ally
+   75	time_since_saw_nearby_enemy
+   76	death_count
+   77	has_santa_hat
+   78	toggle_state
+   79	level
+   80	spoken_to_allies_only
+   81	spoken_to_enemies_only
+   82	ally_hero_name
+   83	enemy_hero_name
+   84	caster_hero_name
+   85	targetclassname
+   86	From
+   87	ping_concept
+   88	ping_type
+   89	is_final_core
+   90	player_lane_color
+   91	ping_location
+   92	is_same_team
+   93	is_item
+   94	pinged_ability_name
+   95	ability_ready
+   96	ability_almost_ready
+   97	ability_number
+   98	pinged_hero_name
+   99	announce_event
+  100	shield_generator_remaining
+  101	firstblood
+  102	kill_streak_ended
+  103	shielded
+  104	assist_count
+  105	other_hero_healing
+  106	nearby_hero_networth_pct_diff
+  107	num_enemy_players_in_base
+  108	time_enemy_in_base
+  109	channeling_ability
+  110	bomb_attached
+  111	all_players
+  112	nearby_allies_and_spectators
+  113	in_cat_form
+  114	was_stolen
+  115	Announcer_Tier2Boss_UnderAttacked_BlueLane
+  116	Announcer_Tier2Boss_UnderAttacked_GreenLane
+  117	Announcer_Tier2Boss_UnderAttacked_PurpleLane
+  118	Announcer_Tier2Boss_UnderAttacked_YellowLane
+  119	Male_Announcer_Tier2Boss_UnderAttacked_BlueLane
+  120	Male_Announcer_Tier2Boss_UnderAttacked_YellowLane
+  121	Announcer_Generator_Attacked
+  122	Male_Announcer_Generator_Attacked
+  123	Announce_Enemy_Entering_Base
+  124	Announce_Enemy_Leaving_Base
+  125	Announce_Enemy_Sill_In_Base
+  126	Announce_Rejuv_Picked_Up
+  127	allies_reliable
+  128	Male_Announcer_Commend_Healing_Heroes
+  129	Female_Announcer_Commend_Healing_Heroes
+  130	Male_Announcer_Commend_Kill_Assists
+  131	Female_Announcer_Commend_Kill_Assists
+  132	life_time
+  133	from_crate
+  134	is_interrupted
+  135	idol_hold_duration
+  136	IdolLanding
+  137	IdolWaitingOnBridge
+  138	IdolWaitingOnStreet
+  139	IsHoldingIdolTooLong
+  140	potentially_audible_set_minus_target
+  141	name
+  142	health
+  143	healthfrac
+  144	map
+  145	distancetoenemy
+  146	reason
+  147	respawn_reason
+  148	playerhealth
+  149	playerspeed
+  150	allied_t1s_destroyed
+  151	allied_t2s_destroyed
+  152	allied_t3s_destroyed
+  153	enemy_t3s_destroyed
+  154	unspent_gold
+  155	total_gold
+========================================
+
+
+
+Player entity 
+ - name ?
+ - class ? "player" ?
+
+As kelvin : 
+	cl_dumpentity  ability_ice_grenade
+	int32              m_iRemainingCharges: 1 
+	
+dump_entity_report  
+
+citadel_dump_player_stats
+
+dump_play_stats
+bot_kick_all 
+bot_mimic 0 (id is pawn bot character)
+bot_mimic_target (mimic currently aimed character)
+
+citadel_spawn_trooper
+
+citadel_allow_duplicate_heroes 
+citadel_allow_pausing
+citadel_allow_purchasing_anywhere 
+citadel_crate_reward_base
+citadel_create_unit
+citadel_enable_<>
+citadel_destroy_all_npcs
+citadel_dump_game_state
+
+citadel_duck_spam_slow_penalty_duration
+citadel_dump_player_stats
+citadel_FindUnitsInRadius
+citadel_first_person
+citadel_fly_accelerate
+
+citadel_give_gold
+citadel_give_player
+citadel_give_player_gold
+citadel_healthbars_enabled
+citadel_hero_lock_all
+citadel_hero_testing_give_abilities
+
+citadel_increment_killstreak
+citadel_locally_lock_heroes
+citadel_list_upgrades 1-3
+
+citadel_unlock_flex_slots
+citadel_match_status
+
+citadel_minimum_fire_rate
+citadel_min_accel_speed
+
+
+citadel_new_years_fireworks_force_start 1
+citadel_player_neutral_gold_drop_min
+citadel_player_regen_zone_stamina_regen 
+citadel_player_starting_hero
+citadel_player_starting_team
+citadel_private_lobby_duplicate_heroes_enabled
+citadel_rapid_stamina_regen
+citadel_show_movespeed_on_hud true
+citadel_show_movement_speed_in_units true
+citadel_spawn_all_heroes_in_a_line
+
+
+citadel_spawn_combine_only false
+citadel_spawn_rebels_only
+citadel_spawn_urn
+citadel_stunme
+citadel_team_size 35
+citadel_trigger_rope_size ?
+citadel_trooper_shooting_enabled
+citadel_trooper_force_idle
+citadel_trooper_spawn_enabled
+citadel_unit_status_show_stats
+citadel_unlock_flex_slots
+
+citadel_wall_jump_fatigue_recovery
+citadel_wall_jump_num_free_wall_jumps
+citadel_wall_jump_stamina_cost
+citadel_wall_ride_enabled ?????
+
+No tool to open VDATA ? 
+citadel_open_hero_vdata_by_name lash => 
+Unrecognized tool 'vdata_editor' specified by request - ignored.
+
+
+hero_data_inspect true ???
+sv_citadel_log_ability_use true ???
+dump_hero_names
+
+
+spew ?
+
+citadel_hideout_ball_show_juggle_count OMG BALL COUNT ?!
+
+citadel_get_rp
+	Key [0:steam_display] = Salle d'attente : Brutus (14 min)
+	Key [1:status] = #Steam_Citadel_InGame_Hero
+	Key [2:param0] = 14
+	Key [3:param1] = #Steam_Citadel_RP_MM_PrivateLobby
+	Key [4:param2] = #Steam_RP_hero_lash
+
+d
+ReadSteamRemoteStorageFile( bufOut, "cfg/cached_hero_builds.kv3" ) -> 0.000232 seconds
+
+Whats that ?? :
+	C:\buildworker\citadel_rel_win64\build\src\public\tier0\utldict.h (213) : AssertMsg Failed in function CUtlDict<class CUtlString,class CDefFastCaselessStringLess>::Insert():
+	Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
+	
+	C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\maps\ui\hero_shop\abrams_shop.vpk
+
+[0:29.061] Received IGameEvent: 'client_player_hero_changed'.

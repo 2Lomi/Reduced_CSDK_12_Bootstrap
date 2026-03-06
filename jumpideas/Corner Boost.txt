@@ -1,0 +1,53 @@
+citadel_air_jumps_enabled => Corner boost training
+dz => There's a maximum height. I can create few consecutives jump with maximum height while testing by putting this to a very high value
+
+
+
+Corner boost :
+Ideal safe trigger (avoid vaulting/climb/abuse)
+
+0.12 (0.11 ? 0.10 ?)
+
+
+
+>Hero with dash (3 ?) X
+>Deactivate double jump X
+
+>Simple corner boost X
+>Color (Comment représenter l'angle ? Mesh : héro en position de wall slide ?)  => Color X
+
+
+>Dash Drop into => Corner boost 
+
+side view 
+_____________________
+		 |     __E___
+_S__     |    |
+    |    |    |
+    |		  |
+    |___CB____|
+
+
+>Double corner boost straight line ? (no respawn ? 80% hauteur)
+
+
+> Dash => Corner boost -> air strafe around corner -> Corner boost
+
+
+_____________________
+|rrrrrrrrrrrrrrrrrrrr|
+|rrrrrrrrrrrrrrrrrrrr|
+|rrrrrrrrrrrrrrrrrrrr|
+|rrrrrrrrr____ rrrrrr|
+|rrrrrrrr|	  |      |
+|	CB	 |    |  E   |
+|	     |    |      |
+|____S___|    |      |
+|  REGEN |
+
+
+
+
+Idée : 
+
+Après passer un trigger, obligé de corner boost 5/6 fois de suite sur le même bloc en attendant qu'une porte s'ouvre (timer ?)

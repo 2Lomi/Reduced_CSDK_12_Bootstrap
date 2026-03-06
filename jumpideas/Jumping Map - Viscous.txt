@@ -1,0 +1,6 @@
+> First thing first 
+
+=> How to handle charges :
+    - abilities.vdata => citadel_ability_lash => AbilityCharges node
+    
+

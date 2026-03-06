@@ -1,0 +1,7 @@
+> First thing first 
+
+Execute "citadel_spawn_trooper" >  Spawn one trooper > Exactly on one spot
+=> How to handle charges :
+    - abilities.vdata => citadel_ability_lash => AbilityCharges node
+    
+

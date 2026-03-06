@@ -133,45 +133,45 @@ importantHeroes:
 nicheUntouchedHeroes:
   - heroName: Bebop
     referenceName: hero_bebop
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Grey_Talon
     referenceName: hero_archer
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Ivy
     referenceName: hero_tengu
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Shiv
     referenceName: hero_shiv
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Mirage
     referenceName: hero_mirage
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Silver
     referenceName: hero_werewolf
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Sinclair
     referenceName: hero_magician
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Vindicta
     referenceName: hero_hornet
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Wraith
     referenceName: hero_wraith
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.6
+    staminaRegeneration: 0.001
   - heroName: Yamato
     referenceName: hero_yamato
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.1
+    staminaRegeneration: 0.001
   - heroName: Abrams
     referenceName: hero_atlas
-    stamina: 0
-    staminaRegeneration: 0.000
+    stamina: 0.999
+    staminaRegeneration: 0.001

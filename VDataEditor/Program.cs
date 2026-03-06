@@ -69,7 +69,7 @@ static void ApplyHeroModifications(KVObject heroData, HeroModification modificat
 
     if (modification.Stamina.HasValue)
     {
-        UpdateStat(stats, "EStamina", modification.Stamina.Value, KVValueType.Int32);
+        UpdateStat(stats, "EStamina", modification.Stamina.Value, KVValueType.FloatingPoint64);
     }
 
     if (modification.StaminaRegeneration.HasValue)
@@ -125,7 +125,7 @@ public class HeroModification
 {
     public string HeroName { get; set; }
     public string ReferenceName { get; set; }
-    public int? Stamina { get; set; }
+    public decimal? Stamina { get; set; }
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
     public int? MoveAcceleration { get; set; }

@@ -83,10 +83,16 @@ static void ApplyHeroModifications(KVObject heroData, HeroModification modificat
     }
 
     if(modification.RemoveHeavyMelee.HasValue && modification.RemoveHeavyMelee == true)
-    {
-        System.Console.WriteLine("EYO");
+    { 
         UpdateStat(abilties, "ESlot_Weapon_Melee", String.Empty, KVValueType.String);
     }
+
+    if(modification.RemoveJump.HasValue && modification.RemoveJump == true)
+    { 
+        UpdateStat(abilties, "ESlot_Ability_Jump", String.Empty, KVValueType.String);
+    }
+
+    
 }
 
 static void UpdateStat(KVObject stats, string statName, object value, KVValueType valueType)
@@ -144,6 +150,7 @@ public class HeroModification
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
     public bool? RemoveHeavyMelee {get;set;}
+    public bool? RemoveJump {get;set;}
     public int? MoveAcceleration { get; set; }
 }
 

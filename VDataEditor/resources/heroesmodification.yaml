@@ -81,7 +81,9 @@ nonImportantHeroes:
     moveAcceleration: 4
   - heroName: Victor
     referenceName: hero_frank
-    stamina: 4
+    stamina: 0
+    removeJump: true
+    removeHeavyMelee: true
     staminaRegeneration: 0.001
     moveSpeed: 7.2
     moveAcceleration: 4

@@ -50236,7 +50236,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 0.000000
 			EBaseHealthRegen = 1.500000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -50302,9 +50302,9 @@
 		m_mapBoundAbilities = 
 		{
 			ESlot_Weapon_Primary = "citadel_weapon_frank_set2"
-			ESlot_Weapon_Melee = "ability_melee_frank"
+			ESlot_Weapon_Melee = ""
 			ESlot_Ability_Mantle = "citadel_ability_mantle"
-			ESlot_Ability_Jump = "citadel_ability_jump"
+			ESlot_Ability_Jump = ""
 			ESlot_Ability_Slide = "citadel_ability_slide"
 			ESlot_Ability_ZipLine = "citadel_ability_zip_line"
 			ESlot_Ability_ZipLineBoost = "citadel_ability_zipline_boost"

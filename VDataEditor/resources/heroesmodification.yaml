@@ -68,8 +68,9 @@ nonImportantHeroes:
     moveAcceleration: 4
   - heroName: Seven
     referenceName: hero_gigawatt
-    stamina: 4
+    stamina: 0
     staminaRegeneration: 0.001
+    removeHeavyMelee: true
     moveSpeed: 7.2
     moveAcceleration: 4
   - heroName: Venator
@@ -135,43 +136,54 @@ nicheUntouchedHeroes:
     referenceName: hero_bebop
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Grey_Talon
     referenceName: hero_archer
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Ivy
     referenceName: hero_tengu
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Shiv
     referenceName: hero_shiv
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Mirage
     referenceName: hero_mirage
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Silver
     referenceName: hero_werewolf
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Sinclair
     referenceName: hero_magician
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Vindicta
     referenceName: hero_hornet
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Wraith
     referenceName: hero_wraith
     stamina: 0.6
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Yamato
     referenceName: hero_yamato
     stamina: 0.1
     staminaRegeneration: 0.001
+    moveSpeed: 7.2
   - heroName: Abrams
     referenceName: hero_atlas
     stamina: 0.999
     staminaRegeneration: 0.001
+    moveSpeed: 7.2

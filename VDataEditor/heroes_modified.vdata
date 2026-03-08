@@ -2197,7 +2197,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 0.000000
 			EBaseHealthRegen = 1.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -2262,7 +2262,7 @@
 		m_mapBoundAbilities = 
 		{
 			ESlot_Weapon_Primary = "citadel_weapon_gigawatt_set"
-			ESlot_Weapon_Melee = "citadel_ability_melee_gigawatt"
+			ESlot_Weapon_Melee = ""
 			ESlot_Ability_Mantle = "citadel_ability_mantle"
 			ESlot_Ability_Jump = "citadel_ability_jump"
 			ESlot_Ability_Slide = "citadel_ability_slide"
@@ -3321,7 +3321,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.900000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -5565,7 +5565,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 6.400000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -14540,7 +14540,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 6.450000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 4.000000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -19045,7 +19045,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 6.700000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -23441,7 +23441,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 8.200000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -35223,7 +35223,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.000000
+			EMaxMoveSpeed = 7.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4

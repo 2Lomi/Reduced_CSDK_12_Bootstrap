@@ -58,6 +58,9 @@ File.WriteAllText("heroes_modified.vdata", output);
 static void ApplyHeroModifications(KVObject heroData, HeroModification modification)
 {
     var stats = heroData.GetSubCollection("m_mapStartingStats");
+    var abilties = heroData.GetSubCollection("m_mapBoundAbilities");
+    
+
 
     if (modification.MoveAcceleration.HasValue)
     {
@@ -78,6 +81,12 @@ static void ApplyHeroModifications(KVObject heroData, HeroModification modificat
     {
         UpdateStat(stats, "EStaminaRegenPerSecond", Convert.ToDouble(modification.StaminaRegeneration.Value), KVValueType.FloatingPoint64);
     }
+
+    if(modification.RemoveHeavyMelee.HasValue && modification.RemoveHeavyMelee == true)
+    {
+        System.Console.WriteLine("EYO");
+        UpdateStat(abilties, "ESlot_Weapon_Melee", String.Empty, KVValueType.String);
+    }
 }
 
 static void UpdateStat(KVObject stats, string statName, object value, KVValueType valueType)
@@ -85,6 +94,10 @@ static void UpdateStat(KVObject stats, string statName, object value, KVValueTyp
     var existingValue = stats.Properties[statName];
     stats.AddProperty(statName, new KVValue(valueType, existingValue.Flag, value));
 }
+
+
+
+
 
 public static class DirectoryHelper
 {
@@ -130,6 +143,7 @@ public class HeroModification
     public decimal? Stamina { get; set; }
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
+    public bool? RemoveHeavyMelee {get;set;}
     public int? MoveAcceleration { get; set; }
 }
 

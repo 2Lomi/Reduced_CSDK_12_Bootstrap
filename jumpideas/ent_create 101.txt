@@ -1,0 +1,7 @@
+ent_create prop_dynamic {"targetname" "cooltele" "uselocaloffset" "false" "startdisabled" "false" "spawnflags" "0" "solid" "6" "model" "models/props_structures/teleporter_box.vmdl" "origin" "0 0 512"}
+
+ent_create info_target_server_only {"targetname" "cooltele_exit" "spawnflags" "0" "origin" "0 0 248"}
+
+ent_create citadel_trigger_teleport {"targetname" "cooltele_trigger" "uselocaloffset" "false" "startdisabled" "false" "spawnflags" "4097" "prop" "cooltele" "exitpoint" "cooltele_exit" "model" "maps/dl_midtown/entities/957_teleport_trigger_14781_957_2.vmdl" "origin" "0 0 512"}
+
+ent_fire cooltele_trigger addoutput "OnTeleport>!Activator>SetScale>0.5>0>-1"

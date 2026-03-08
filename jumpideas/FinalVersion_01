@@ -2,6 +2,11 @@ info_teleport_location
 
 What to do : 
 
+FIX 
+MANTLING/VAULTING
+
+Mantling is when a character grabs an edge and pulls themselves up onto it.
+Vaulting means quickly jumping or sliding over an obstacle (usually waist-high) without stopping.
 
 Tweaks :
 
@@ -18,64 +23,19 @@ Tweaks :
     
 - Main Hub
     - Welcome Message
-        - Don't buy items
-        - PLEASE READ !
-        - Activate sv_cheats 1
+        - Don't buy items (0 starting souls, 0 ability point start ?)
+        - PLEASE READ WARNING !
+        - Activate sv_cheats 1 (Not required ?)
         - Follow hero recommendation
         - Stamina limitation explanation
     - TPs labels + models ?
 
-- Long Jump
-    Labels for back TPs
-    Explanation for this zone
-        >>>> - "Keep heavy melee pressed + Space to vault over obsctale" <<<<<
-        >>>> - "Keep heavy melee pressed + Space to vault over obsctale + Keep CTRL PRESSED to slide" <<<<<
-        - "Multiple solutions for each jumps."
-        - "If you need help, labels are here to indicates what you can do"
-        
-    Add a TP for each individual jump
-    Labels for each jumps :
-        - 1 : Jump
-            - 0 stamina hero
-        - 2 : Dash Jump
-            - 1 stamina Hero
-            (Jump before leaving platform to save on stamina)
-        - 3 : Dash Jump > Vault
-            - 1 stamina Hero
-            (Keep espace pressed to vault)
-        - 4 : Dash Jump > DOUBLE JUMP
-        - 5 : Dash Jump > Double Jump > DASH 
-                => Add dash distance to it (add about 5/4 of a block distance)
-        - 6 : Dash Jump > Double Jump > Dash > HEAVY MELEE
-        - 7 : BONUS JUMP
-            : Vault (decreases slightly block size in both x/y to disallow dash jump)
-        
-    Add a TP back to HUB    
-
-
+- Long Jump 
+    - "If you need help, labels are here to indicates what you can do"
+    - Hard version ?
 
 - Air Control 
-    => Mirror it
-    - Label to teach how to STRAFE mid-air
-    - Fix weird ICE bug when switching hero at the start (fixed with jumping ?)
-    
-    - Jump 1 : Add label "Try doing it without heavy melee !"
-    - Jump 2 : Fix respawn ? Do proper separation with jump 3
-    - Jump 3 : 
-        - USE DIFFERENT RED PLEASE, MY EYES
-        - Import launch pad model - Add particles ?
-    - Jump 4 :
-        - Add Label (1 Jump + proper air strafing - Try not to use heavy melee !)
-        - Fix stairs ? Use normal geometry ?
-    - Jump 5 : 
-        - Add Label (0 Jump + proper air strafing - Try not to use heavy melee !)
-    
-    
-    - Switch to hero without heavy melee and 0 stamina :
-    - Add Jump 4 : Alternative (no heavy melee ?)
-    - Add Jump 5 : Alternative (no heavy melee ?)
-    
-    - Add TP back to HUB 
+    => Mirror it 
 
 - Corner Boost
 
@@ -116,8 +76,9 @@ Tweaks :
     - Add a back TP 
         
 - Wall jump 
-    - ADD LABEL to explain (link it to air control, very important)
-      - GAIN HEIGHT
+    - ADD LABEL 
+        - to explain (link it to air control, very important)
+        - GAIN HEIGHT
 
     - Jump 1 : Increase height (double jump mitigation)
 

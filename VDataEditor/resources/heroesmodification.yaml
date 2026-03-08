@@ -95,6 +95,7 @@ nonImportantHeroes:
     moveAcceleration: 4
   - heroName: Warden
     referenceName: hero_warden
+    removeJump: true
     stamina: 4
     staminaRegeneration: 0.001
     moveSpeed: 7.2

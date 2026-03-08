@@ -1067,7 +1067,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -2197,7 +2197,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -4464,7 +4464,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -10061,7 +10061,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.750000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -11193,7 +11193,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -12312,7 +12312,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -17926,7 +17926,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -22322,7 +22322,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -41567,7 +41567,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -48063,7 +48063,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 3.500000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -49178,7 +49178,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -50236,7 +50236,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.500000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0
@@ -51303,7 +51303,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 3.000000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 0.001000
 			EAbilityResourceMax = 0

@@ -1,0 +1,168 @@
+giveitem upgrade_improved_stamina
+
+What to do : 
+
+
+Tweaks :
+
+- Coloring
+    Global :  
+        - Indicate with color which type of zone : (Color blind tests ?)
+            - Blue : Wall jump
+            - Purple : Corner boost
+            - Air control ?
+            - Respawn/Avoid zone : Red
+            - Func Regenerate : Green
+            - Teleport Zone : Light blue
+
+    
+- Main Hub
+    - Welcome Message
+        - Don't buy items
+        - PLEASE READ !
+        - Activate sv_cheats 1
+        - Follow hero recommendation
+        - Stamina limitation explanation
+    - TPs labels + models ?
+
+- Long Jump
+    Labels for back TPs
+    Explanation for this zone
+        >>>> - "Keep heavy melee pressed + Space to vault over obsctale" <<<<<
+        >>>> - "Keep heavy melee pressed + Space to vault over obsctale + Keep CTRL PRESSED to slide" <<<<<
+        - "Multiple solutions for each jumps."
+        - "If you need help, labels are here to indicates what you can do"
+        
+    Add a TP for each individual jump
+    Labels for each jumps :
+        - 1 : Jump
+            - 0 stamina hero
+        - 2 : Dash Jump
+            - 1 stamina Hero
+            (Jump before leaving platform to save on stamina)
+        - 3 : Dash Jump > Vault
+            - 1 stamina Hero
+            (Keep espace pressed to vault)
+        - 4 : Dash Jump > DOUBLE JUMP
+        - 5 : Dash Jump > Double Jump > DASH 
+                => Add dash distance to it (add about 5/4 of a block distance)
+        - 6 : Dash Jump > Double Jump > Dash > HEAVY MELEE
+        - 7 : BONUS JUMP
+            : Vault (decreases slightly block size in both x/y to disallow dash jump)
+        
+    Add a TP back to HUB    
+
+
+
+- Air Control 
+    => Mirror it
+    - Label to teach how to STRAFE mid-air
+    - Fix weird ICE bug when switching hero at the start (fixed with jumping ?)
+    
+    - Jump 1 : Add label "Try doing it without heavy melee !"
+    - Jump 2 : Fix respawn ? Do proper separation with jump 3
+    - Jump 3 : 
+        - USE DIFFERENT RED PLEASE, MY EYES
+        - Import launch pad model - Add particles ?
+    - Jump 4 :
+        - Add Label (1 Jump + proper air strafing - Try not to use heavy melee !)
+        - Fix stairs ? Use normal geometry ?
+    - Jump 5 : 
+        - Add Label (0 Jump + proper air strafing - Try not to use heavy melee !)
+    
+    
+    - Switch to hero without heavy melee and 0 stamina :
+    - Add Jump 4 : Alternative (no heavy melee ?)
+    - Add Jump 5 : Alternative (no heavy melee ?)
+    
+    - Add TP back to HUB 
+
+- Corner Boost
+
+    -  Explanation for this zone
+        >>>> - "How does corner boost work ?" <<<<<
+        >>>> Act as a wall jump (meaning that it either cost 0 or 0.5 stamina if first or second "wall jump")
+        >>>> Used to gain massive amount of height with 0 stamina.
+        >>>> Really tricky !
+        >>>> A proper corner boost has a very distinctive sound (Play sound ?)
+        >>>> Add a maximum height check to show how high it can get
+        >>>> EASY/HARD MODE ? (Abrams model OR Paradox) => 1 Stamina
+
+    - Jump 1
+        - Increase height of the hole (Manage double jump limitation)
+        - Recolor block properly (no respawn)
+
+    - Jump 1.5 
+        - Copy jump 1 => JUMP WITH ZONE RESTRICTION/Respawn
+
+    - Jump 2 Add a roof increase glass height
+            - Increase height of final platform (double jump mitigation)
+
+    - Jump 3 : Label : Depending on your character model, you might prefer going left or right ! But all characters have exactly the same physic !
+    
+    - Jump 4 : Label : "Dash" into > "Late dash"
+                "Explanation about speed conservation"
+    
+    
+    - Jump 5 :
+            Mirror it !
+            Label : You're gonna hate me ! Good luck ! You need to
+                > INcrease first platform height for double jump mitigation (not needed because half stamina cost for 2nd CB)
+                NEED FUNC REGENERATE at start !
+                First platform is landable ??!!!
+            Add arrows !
+                
+ 
+    - Add a back TP 
+        
+- Wall jump 
+    - ADD LABEL to explain (link it to air control, very important)
+      - GAIN HEIGHT
+
+    - Jump 1 : Increase height (double jump mitigation)
+
+    - Jump 2 : 
+        Closer walls please
+        Less thick wall please
+        Increase landing platform height
+
+    - Jump 3 : 
+        - Increase landing platform height
+
+    - Jump 4 :
+        - Increase landing platform height
+
+    - Jump 5 : 
+        - Increase separation wall thickness 
+        - A bit more length too (about 1/3 of distance to wall)
+
+    - Jump 7 : OK
+
+    - Jump 8 : Copy-paste jump 5 but block all bottoms ()
+
+    - Add a back TP 
+Manage double jump limitation
+    Long Jump
+
+    Air Control
+
+    Corner Boost
+
+    Wall jump 
+Closed
+    Long Jump
+
+    Air Control
+
+    Corner Boost
+
+    Wall jump 
+Lightning ? 
+
+    Long Jump
+
+    Air Control
+
+    Corner Boost
+
+    Wall jump

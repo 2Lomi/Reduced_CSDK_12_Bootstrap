@@ -1,3 +1,25 @@
+LIMITES CORNER BOOST GEOMETRY
+    Workplane aligné : (limité par trigger) 12.5 de distance entre le trigger et l'edge du la platform
+                    (Pourquoi pas 13 ? => J'ai réussi à tenir sur du 13 avec un trigger très bas malgré que on ne puisse PAS stand-on sur du 13)
+    Workplane Diagonal  : (limité par stand-on) 12 de distance entre le trigger et l'edge du la platform (14 = Stand-on est possible)
+    Trigger = Pas hero based => Same for everyone
+
+    CSDK 12 & Original Deadlock
+        Aligné = 
+            Stand up on = 15 
+            Good for training = 13
+            Conclusion
+                
+        Diagonal
+            Stand up on = 13
+            Good for training = 12
+
+
+
+
+
+
+
 citadel_air_jumps_enabled => Corner boost training
 dz => There's a maximum height. I can create few consecutives jump with maximum height while testing by putting this to a very high value
 
@@ -7,6 +29,9 @@ Corner boost :
 Ideal safe trigger (avoid vaulting/climb/abuse)
 
 0.12 (0.11 ? 0.10 ?)
+
+
+
 
 
 

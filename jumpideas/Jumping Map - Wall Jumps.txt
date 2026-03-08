@@ -1,1 +1,27 @@
 See pictures
+
+Jump 1 
+     trop bas
+    face en trop (dessous)
+
+Jump + 1.2
+Wall jump + air control
+
+
+Jump 2 : OK (no double jump) (dash jump + wall jump + dash)
+
+Jump 2.1 :   Double jump ?
+        
+
+jump 3 : (trop large => raccourcir platforme arrivée OU allonger les jumps) ( => Mettre un mur devant le 2nd wall jump (avoid skip)
+Dash Jump + Wall Jump + dash + wall Jump (+heavy melee)
+
+
+Jump 4 : vault sur les target à enlever + décaler vers la droite
+    empecher le vault au début
+    alonger le mur
+
+    1ere target plus à droite en bas
+    2 target plus en bas à gauche
+    3 target plus en bas à gauche
+

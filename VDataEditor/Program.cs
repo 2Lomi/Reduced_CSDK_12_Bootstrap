@@ -27,6 +27,8 @@ var heroModifications = deserializer.Deserialize<HeroModificationCollection>(
  //Todo move the file automatically ()
 var resource = new Resource();
 var filePath = Path.Combine(new DirectoryInfo(projectRoot).Parent.FullName, @"ConsoleApp1\Reduced_CSDK_12\game\citadel\scripts\heroes.vdata_c");
+
+//var filePath = @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes.vdata_c";
 using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 resource.Read(stream, verifyFileSize: false);
 

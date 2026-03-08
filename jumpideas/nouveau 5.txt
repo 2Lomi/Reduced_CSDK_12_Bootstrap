@@ -1,0 +1,32 @@
+What to do : 
+
+
+Closed
+Lightning
+Main Hub
+Long Jump
+Air Control
+Corner Boost
+
+
+point_soundevent
+BouncePad.Activate
+REtrigger loop YES
+Use World Index
+
+prop_dynamic
+
+worldmodel : models/particle/bounce_pad_01.vmdl
+
+Not Solid
+No
+Yes
+bounce_pad_01_idle
+Loop
+_____
+Do Not Loop
+
+
+
+info_particle_system
+particles/environment/fan_wind.vpcf

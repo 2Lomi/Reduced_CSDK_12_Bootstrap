@@ -1,13 +1,21 @@
-> Add jump numbers
-  
-Jump 4
->>INCREASE HEIGHT  (about 1 block blue higher)
+1 to 7 in red
+
+Jump 2 > 2nd panel need light  at its bottom right
+Jump 3 > 2nd panel need light  at its bottom right 
+Jump 3 > 3rd panel need light  at its bottom right
+        Moving towards the edge - while sliding it - means that you will slow down your fall a tiny bit more.
+
+Jump 4 > 1st panel need light   
+Jump 6 > 1st panel need light  
+         2nd panel need light  
+
+        >TEST START DISABLED ON TP TRIGGER !<
+            => If not working => Make multiple trigger slightly bigger and timer slightly longer ?               
+
+Jump 7 > 1st panel need light  
+        2nd panel has 1 space too much
 
 
-> Jump 5
-    Try adding a light to indictaes where is landing ?
+Air control 1 
+    Move slightly the blue mark
 
-> Func regenerate at the top ?
-
-
-Jump 6 LEFT  glitchy font

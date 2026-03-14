@@ -1,0 +1,77 @@
+Jump School Map
+
+
+Hello !  I can only recommend you to read the whole thing if you have any question
+
+This mod is work-in-progress jumping map. Any feedback is welcome !
+
+README/How to play the map :
+
+- Install mod with Deadlock Mod Manager
+- With dev console type "map jump_school"
+- In game, in console, type "changeteam 2"
+- In game, you have to WAIT ABOUT 15 SECONDS (see video) until the "predictions" log stops.
+- After the logs stopped, you can swap hero to anyone
+- In game, in console, type "sv_cheats 1" if you don't, you'll die midway through the map !
+
+
+You will level up due to character change. This map is designed around stamina usage and not abilities. You can ignore them all completely.
+
+Description 
+
+I've done 3 beginner-friendly routes to familiarize with simple Long jumps, Air control and Wall jumping. I added tons of tips along the route if you need them.
+
+I'm planning and currently working on A LOT of ideas and route design.
+
+In this map, you will find a 4th route dedicated to corner boosting that I'm still working on. But I prefer to publish the map in its current state and receive any feedback you might have. You can mostly ignore that 4th route.
+
+I'm very new to map making, level design. The only experiences I have are my countless hours in deadlock and TF2 rocket jumping. 
+
+I tried my best to make it "medium" but not too hard to help new players feel welcome to try the map.
+
+But again, any feedback is most welcome ! Throw in your 2 cents at me, I'll take it gladly.
+
+
+Disclaimer 
+
+Heroes.vdata
+This map overrides heroes data. Which means that a few heroes will have different stats values from their original values. This is the only way I found to prevent players from jumping/heavy melee-ing in key part of the map.
+
+
+The impacted heroes are : 
+
+- Geist (4 stamina, infinite stamina regen by default)
+- Paige (4 stamina, infinite stamina regen by default)
+- Yamato (0 stamina)
+- Seven (0 stamina, no more melee attack)
+- Victor (0 stamina, no more melee attack, no more jumping)
+- Abrams (1 stamina, infinite stamina regen by default)
+
+They also all have the same movespeed (7.2)
+
+Unfortunately, modifying heroes data also means that the mod override default heroes values inside the hideout and hero testing map. It will however not impact anything inside a real game. You can play safely those heroes.
+
+I hope that in the future I will find another way to force player to low stamina values...
+
+Predictions delay to connect to the map
+
+I wish I had a fix to avoid this problem. But I've been going around in circle for days to find a fix. I hope I will find one eventually. Sorry for the inconvenience
+
+
+Learn how to jump one obstacle at a time
+
+
+If you have feedback about : 
+- Map clarity
+- Path clarity
+- Stamina management
+- Specific Jump problem (There are numbers on all of them, don't hesitate)
+- Any fun ideas about a jump route
+- Any jumping technique you have problem with
+
+You can pm me on either platform :
+https://www.reddit.com/user/Eggmasstree/
+https://www.twitch.tv/1lomi
+Discord : battlenet#4435
+
+Or post a comment here or the youtube video.

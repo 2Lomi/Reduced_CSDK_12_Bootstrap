@@ -1056,7 +1056,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.700000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -1067,9 +1067,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -3321,7 +3321,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 7.900000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -3332,9 +3332,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 2
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -4466,7 +4466,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 4.000000
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 222.000000
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -5578,7 +5578,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 0.999000
 			EBaseHealthRegen = 1.500000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 222.000000
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -6687,9 +6687,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -8948,7 +8948,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -10050,7 +10050,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.700000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -10061,9 +10061,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 1.750000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -11182,7 +11182,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.700000
 			ESprintSpeed = 1.100000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -11193,9 +11193,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.181810
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -12301,7 +12301,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 8.200000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -12312,9 +12312,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -13433,7 +13433,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 2
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -14540,7 +14540,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.450000
 			ESprintSpeed = 4.000000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -14551,9 +14551,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 3
 			EBaseHealthRegen = 1.500000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.181818
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -15670,7 +15670,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -17915,7 +17915,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 8.000000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -17926,9 +17926,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 0.800000
@@ -19045,7 +19045,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.700000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -19056,9 +19056,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -20175,9 +20175,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 4
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -22311,7 +22311,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.300000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -22322,9 +22322,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -22389,7 +22389,7 @@
 			ESlot_Weapon_Primary = "citadel_weapon_warden_set"
 			ESlot_Weapon_Melee = "citadel_ability_melee_warden"
 			ESlot_Ability_Mantle = "citadel_ability_mantle"
-			ESlot_Ability_Jump = ""
+			ESlot_Ability_Jump = "citadel_ability_jump"
 			ESlot_Ability_Slide = "citadel_ability_slide"
 			ESlot_Ability_ZipLine = "citadel_ability_zip_line"
 			ESlot_Ability_ZipLineBoost = "citadel_ability_zipline_boost"
@@ -24578,7 +24578,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -25688,7 +25688,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -33078,7 +33078,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -35223,7 +35223,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 7.000000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -35234,9 +35234,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -41556,7 +41556,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.900000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -41567,9 +41567,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 4
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -43751,9 +43751,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.600000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -48052,7 +48052,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.900000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -48063,9 +48063,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 3.500000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -49167,7 +49167,7 @@
 		m_nModelSkin = 0
 		m_mapStartingStats = 
 		{
-			EMaxMoveSpeed = 7.200000
+			EMaxMoveSpeed = 6.500000
 			ESprintSpeed = 1.600000
 			ECrouchSpeed = 4.750000
 			EMoveAcceleration = 4
@@ -49178,9 +49178,9 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 4.000000
+			EStamina = 3
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -51305,7 +51305,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 222.000000
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -53456,7 +53456,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 1.000000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000
@@ -56707,7 +56707,7 @@
 			EProcBuildUpRateScale = 1
 			EStamina = 3
 			EBaseHealthRegen = 2.500000
-			EStaminaRegenPerSecond = 0.001000
+			EStaminaRegenPerSecond = 0.222222
 			EAbilityResourceMax = 0
 			EAbilityResourceRegenPerSecond = 0
 			ECritDamageReceivedScale = 1.000000

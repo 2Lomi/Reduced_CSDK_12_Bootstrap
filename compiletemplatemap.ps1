@@ -12,20 +12,21 @@ jumping_map_map (map) | jumping_map_script (vdata/vpulse)
 >Compile jumping_map_script (vdata/vpulse)
 >Package jumping_map_script (containing vdata_c compiled & map vpk)  directly into game/addons folder
 
-
-WHY 2 FOLDERS : For me in the future :
-bin_cs2\win64\resourcecompiler.exe -r parameter will FIND the vmap file and will try to compile it. But it can't.
-Unfortunately, the "skiptype" parameter does NOT work for vmap while using -r.
-So I would need to either find all files inside the folders that are not map and compile them individually. Or use the "filelist" parameter. But damn I'm bored. I will do it whnever this becomes a chore. 
-Which should not happen (?)
-#>
-
-
-
+ 
 <#backup#>
-Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\template_map9.vmap" "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput"
+Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput"
 
-C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\template_map9.vmap" -noassert -world -nolightmaps -phys -nav -retail -breakpad -nop4 -outroot  "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
+#fast compile
+C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -nolightmaps  -phys -nav -retail -breakpad -nop4 -outroot  "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
+#Full compile
+#C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads  -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -bakelighting -lightmapMaxResolution 1024 -lightmapDoWeld -lightmapVRadQuality 1 -vrad3LargeBlockSize -lightmapLocalCompile -phys -vis -nav -gridnav -sareverb -sareverb_threads  -sapaths -sareverb_threads  -retail -breakpad -nop4 -outroot "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
+
+# It actually works. Hot damn. But then compilation is so long it makes testing workflow a bit more painful.
+# I'll stick with @mrtoastie  method
+
+#final compile
+#C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads  -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -bakelighting -lightmapMaxResolution 2048 -lightmapDoWeld -lightmapVRadQuality 2 -vrad3LargeBlockSize -lightmapLocalCompile -phys -vis -nav -sareverb -sareverb_threads  -sapaths -sareverb_threads  -retail -breakpad -nop4 -outroot "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
+
 
 
 Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\scripts\heroes.vdata" -Force
@@ -90,7 +91,8 @@ $wshell.SendKeys("{ENTER}")
 Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\addons\pak01_dir.vpk" "C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\addons" -Force
 
 
-Get-Process -Name "deadlock" -ErrorAction SilentlyContinue | Stop-Process -Force
+# Get-Process -Name "deadlock" -ErrorAction SilentlyContinue | Stop-Process -Force
+# Get-Process -Name "vconsole2" -ErrorAction SilentlyContinue | Stop-Process -Force
 
 
 # Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\addons\pak01_dir.vpk" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\scripts\heroes.vdata" -Force

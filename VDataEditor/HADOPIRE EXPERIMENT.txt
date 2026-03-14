@@ -1,0 +1,20 @@
+ 
+
+- Spawn location too early 
+
+- Last jump is not clear 
+
+2nd air strafe : Location where to start can help 
+
+
+Wall jump : Prevent double jump by sliding !
+
+Wall jump : blue colors where to wall jump
+
+DO ONLY 2 WALL JUMPS !
+
+Add one more route to 180° around to hit a block
+
+Aim for the highest point of your jump to achieve high jumps
+
+Count how many shots for a jump (count frustration ?)

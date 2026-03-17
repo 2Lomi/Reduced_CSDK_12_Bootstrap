@@ -5,12 +5,14 @@ heroes:
     staminaRegeneration: 222
     moveSpeed: 7.2
     moveAcceleration: 4
+    heroId: 201
   - heroName: Paige
     referenceName: hero_bookworm
     stamina: 4
     staminaRegeneration: 222
     moveSpeed: 7.2
     moveAcceleration: 4
+    heroId: 202
   - heroName: Seven
     referenceName: hero_gigawatt
     stamina: 0
@@ -18,6 +20,7 @@ heroes:
     removeHeavyMelee: true
     moveSpeed: 7.2
     moveAcceleration: 4
+    heroId: 203
   - heroName: Victor
     referenceName: hero_frank
     stamina: 0
@@ -26,18 +29,22 @@ heroes:
     staminaRegeneration: 0.001
     moveSpeed: 7.2
     moveAcceleration: 4 
+    heroId: 204
   - heroName: Yamato
     referenceName: hero_yamato
     stamina: 0.1
     staminaRegeneration: 0.001
     moveSpeed: 7.2
+    heroId: 205
   - heroName: Abrams
     referenceName: hero_atlas
     stamina: 0.999
     staminaRegeneration: 222
     moveSpeed: 7.2
+    heroId: 206
   - heroName: Mirage
     referenceName: hero_mirage
     stamina: 0.999
     staminaRegeneration: 222
     moveSpeed: 7.2
+    heroId: 207

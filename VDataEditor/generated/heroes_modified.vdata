@@ -120770,7 +120770,7 @@
 	hero_ghost_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -120779,7 +120779,7 @@
 		m_nComplexity = 2
 		m_nAllyBotDifficulty = 3
 		m_nEnemyBotDifficulty = 3
-		m_HeroID = 4
+		m_HeroID = 201
 		m_strModelName = "models/heroes_wip/geist/geist.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/ghost_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/ghost_team_reveal.vmap"
@@ -122326,7 +122326,7 @@
 	hero_bookworm_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -122335,7 +122335,7 @@
 		m_nComplexity = 1
 		m_nAllyBotDifficulty = 1
 		m_nEnemyBotDifficulty = 1
-		m_HeroID = 67
+		m_HeroID = 202
 		m_strModelName = "models/heroes_wip/bookworm/bookworm.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/bookworm_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/bookworm_team_reveal.vmap"
@@ -123889,7 +123889,7 @@
 	hero_gigawatt_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -123898,7 +123898,7 @@
 		m_nComplexity = 1
 		m_nAllyBotDifficulty = 1
 		m_nEnemyBotDifficulty = 2
-		m_HeroID = 2
+		m_HeroID = 203
 		m_strModelName = "models/heroes_staging/gigawatt_prisoner/gigawatt_prisoner.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/gigawatt_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/gigawatt_team_reveal.vmap"
@@ -125450,7 +125450,7 @@
 	hero_frank_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -125459,7 +125459,7 @@
 		m_nComplexity = 2
 		m_nAllyBotDifficulty = -1
 		m_nEnemyBotDifficulty = -1
-		m_HeroID = 66
+		m_HeroID = 204
 		m_strModelName = "models/heroes_wip/frank/frank.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/frank_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/frank_team_reveal.vmap"
@@ -127012,7 +127012,7 @@
 	hero_yamato_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -127021,7 +127021,7 @@
 		m_nComplexity = 3
 		m_nAllyBotDifficulty = 1
 		m_nEnemyBotDifficulty = 1
-		m_HeroID = 27
+		m_HeroID = 205
 		m_strModelName = "models/heroes_staging/yamato_v2/yamato.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/yamato_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/yamato_team_reveal.vmap"
@@ -128574,7 +128574,7 @@
 	hero_atlas_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -128583,7 +128583,7 @@
 		m_nComplexity = 1
 		m_nAllyBotDifficulty = 1
 		m_nEnemyBotDifficulty = 1
-		m_HeroID = 6
+		m_HeroID = 206
 		m_strModelName = "models/heroes_wip/abrams/abrams.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/abrams_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/abrams_team_reveal.vmap"
@@ -130134,7 +130134,7 @@
 	hero_mirage_copy = {
 		_class = "CitadelHeroData_t"
 		m_bPlayerSelectable = true
-		m_bDisabled = false
+		m_bDisabled = true
 		m_bInDevelopment = false
 		m_bNeedsTesting = false
 		m_bAssignedPlayersOnly = false
@@ -130143,7 +130143,7 @@
 		m_nComplexity = 2
 		m_nAllyBotDifficulty = 0
 		m_nEnemyBotDifficulty = 0
-		m_HeroID = 52
+		m_HeroID = 207
 		m_strModelName = "models/heroes_staging/mirage_v2/mirage.vmdl"
 		m_strUIShoppingMap = "maps/ui/hero_shop/mirage_shop.vmap"
 		m_strUITeamRevealMap = "maps/ui/team_reveal_hero/mirage_team_reveal.vmap"

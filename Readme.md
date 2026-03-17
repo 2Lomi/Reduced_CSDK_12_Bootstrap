@@ -1,6 +1,6 @@
 Vibecoded most of the thing in there.
 
-I only made this to run windows64 bits, so it won't use proper .exes if you don't go for windows
+I only made this to run only windows64 bits, so it won't use proper .exes if you don't go for windows
 Also, It's probably not functionnal at all on your side, I barely checked what happens in there ... ! 
 
 Steps : 

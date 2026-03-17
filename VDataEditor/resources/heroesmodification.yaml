@@ -1,5 +1,4 @@
----
-nonImportantHeroes:
+heroes:
   - heroName: ladygeist
     referenceName: hero_ghost
     stamina: 4
@@ -26,9 +25,7 @@ nonImportantHeroes:
     removeHeavyMelee: true
     staminaRegeneration: 0.001
     moveSpeed: 7.2
-    moveAcceleration: 4
-importantHeroes: []
-nicheUntouchedHeroes:
+    moveAcceleration: 4 
   - heroName: Yamato
     referenceName: hero_yamato
     stamina: 0.1
@@ -36,6 +33,11 @@ nicheUntouchedHeroes:
     moveSpeed: 7.2
   - heroName: Abrams
     referenceName: hero_atlas
+    stamina: 0.999
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+  - heroName: Mirage
+    referenceName: hero_mirage
     stamina: 0.999
     staminaRegeneration: 222
     moveSpeed: 7.2

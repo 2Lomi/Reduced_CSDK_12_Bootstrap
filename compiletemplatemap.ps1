@@ -27,10 +27,9 @@ C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win6
 #final compile
 #C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads  -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -bakelighting -lightmapMaxResolution 2048 -lightmapDoWeld -lightmapVRadQuality 2 -vrad3LargeBlockSize -lightmapLocalCompile -phys -vis -nav -sareverb -sareverb_threads  -sapaths -sareverb_threads  -retail -breakpad -nop4 -outroot "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
 
-
-
-Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\scripts\heroes.vdata" -Force
-
+ 
+Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\generated\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\scripts\heroes.vdata" -Force
+ 
 
 
 

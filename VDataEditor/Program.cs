@@ -1,7 +1,5 @@
-﻿using System.Collections;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Runtime.InteropServices;
 using ValveKeyValue;
 using ValveResourceFormat;
 using ValveResourceFormat.ResourceTypes;
@@ -12,56 +10,182 @@ using KVObject = ValveResourceFormat.Serialization.KeyValues.KVObject;
 using KVValue = ValveResourceFormat.Serialization.KeyValues.KVValue;
 
 
+ 
 
+var entryArgument = args[0];
 
 var projectRoot = DirectoryHelper.FindSingletonProjectRoot();
-var configurationFile = Path.Combine(projectRoot, "resources", "heroesmodification.yaml");
-
-var deserializer = new DeserializerBuilder()
-    .WithNamingConvention(CamelCaseNamingConvention.Instance)
-    .Build();
-
-var heroModifications = deserializer.Deserialize<HeroModificationCollection>(
-    File.ReadAllText(configurationFile));
- 
- //Todo move the file automatically ()
-var resource = new Resource();
-var filePath = Path.Combine(new DirectoryInfo(projectRoot).Parent.FullName, @"ConsoleApp1\Reduced_CSDK_12\game\citadel\scripts\heroes.vdata_c");
-
-//var filePath = @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes.vdata_c";
-using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-resource.Read(stream, verifyFileSize: false);
-
-
-var dataBlock = resource.GetBlockByType(BlockType.DATA) as BinaryKV3;
-
-foreach (var heroKey in heroModifications.GetHeroesReferences())
+string heroesVdataCPath = "";
+// if (entryArgument == "csdk")
+// {
+//     heroesVdataCPath = Path.Combine(new DirectoryInfo(projectRoot).Parent.FullName, @"ConsoleApp1\Reduced_CSDK_12\game\citadel\scripts\heroes.vdata_c");
+//     OverrideHeroDatas(heroesVdataCPath);
+// }
+// else if (entryArgument == "deadlock")
+// {
+//     await ExtractHeroesVdataC(@"C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\pak01_dir.vpk", @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\resources");
+//     heroesVdataCPath = @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\heroes.vdata_c";
+//     OverrideHeroDatas(heroesVdataCPath);
+// }
+System.Console.WriteLine("Valid execution :");
+System.Console.WriteLine("dotnet run addhero deadlock");
+System.Console.WriteLine("dotnet run addhero csdk");
+if(entryArgument == "addhero")
 {
-    if (dataBlock.Data.Properties.ContainsKey(heroKey))
+    if(args.Length != 2)
     {
-        var heroData = dataBlock.Data.GetSubCollection(heroKey);
-        var modification = heroModifications.GetHeroModification(heroKey);
-        ApplyHeroModifications(heroData, modification);
-        System.Console.WriteLine(heroKey + " modified");
+        return;
+    }
+    if(args[1] == "deadlock")
+    {
+        await ExtractHeroesVdataC(@"""C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\pak01_dir.vpk""", @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\resources");
+        heroesVdataCPath = @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\resources\scripts\heroes.vdata_c";  
+        await AddHeroDataAsync(heroesVdataCPath);    
+    }
+    else if(args[1] == "csdk")
+    {
+        await ExtractHeroesVdataC(@"C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\pak01_dir.vpk", @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\resources");
+        heroesVdataCPath = @"C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\resources\scripts\heroes.vdata_c";  
+        await AddHeroDataAsync(heroesVdataCPath); 
+    }
+    else
+    {
+        return;
+
+    } 
+} 
+else
+{
+    System.Console.WriteLine("input should be either 'deadlock' or 'csdk' or 'addhero'");
+    return;
+}
+
+static async Task ExtractHeroesVdataC(string inputPath, string outputPath)
+{       
+    var process = Process.Start(
+        @"C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\cli-windows-x64\Source2Viewer-CLI.exe",  
+        $@"-i {inputPath} -o {outputPath} -f scripts/heroes.vdata_c");
+
+    if (process != null)
+    {
+        await process.WaitForExitAsync();
     }
 }
 
-var kv3File = new KV3File(
-    dataBlock.Data,
-    encoding: KV3IDLookup.Get("text"),
-    format: KV3IDLookup.Get("generic")
-);
+async Task AddHeroDataAsync(string filePath)
+{ 
+    var outputPath = Path.Combine("generated", "heroes_modified.vdata");
+    
+    var projectRoot = DirectoryHelper.FindSingletonProjectRoot();
+    var configurationFile = Path.Combine(projectRoot, "resources", "heroesmodification.yaml");
+    
+    var deserializer = new DeserializerBuilder()
+        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+        .Build();
 
-var output = kv3File.ToString();
-File.WriteAllText("heroes_modified.vdata", output);
+    var heroModifications = deserializer.Deserialize<HeroModificationCollection>(File.ReadAllText(configurationFile));
+
+    using var resource = new Resource();
+    using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    resource.Read(stream, verifyFileSize: false); 
+    if (resource.DataBlock is BinaryKV3 binaryKv)
+    {
+        var root = binaryKv.Data;
+
+        foreach (var heroModification in heroModifications.Heroes)
+        {
+            if (root.Properties.TryGetValue(heroModification.ReferenceName, out var originalValue))
+            {
+                
+                Console.WriteLine($"Cloning compiled hero: {heroModification.CopyReferenceName}...");
+           
+                // 3. Deep Copy
+                var clonedValue = DeepCopyKVValue(originalValue);
+                  
+                root.AddProperty($"{heroModification.CopyReferenceName}", clonedValue);
+
+                ApplyHeroModifications(root.GetSubCollection($"{heroModification.CopyReferenceName}") ,heroModification); 
+
+                var mm = root.GetSubCollection($"{heroModification.CopyReferenceName}");
+            }
+        }
+ 
+        var kv3Text = binaryKv.ToString();
+        
+        File.WriteAllText(outputPath, kv3Text);
+    }
+}
+ 
+static void OverrideHeroDatas(string filePath)
+{
+    var projectRoot = DirectoryHelper.FindSingletonProjectRoot();
+    var configurationFile = Path.Combine(projectRoot, "resources", "heroesmodification.yaml");
+
+    var deserializer = new DeserializerBuilder()
+        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+        .Build();
+
+    var heroModifications = deserializer.Deserialize<HeroModificationCollection>(
+        File.ReadAllText(configurationFile));
+     
+    var resource = new Resource();
+
+    using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    resource.Read(stream, verifyFileSize: false);
+
+
+    var dataBlock = resource.GetBlockByType(BlockType.DATA) as BinaryKV3;
+
+    foreach (var hero in heroModifications.Heroes)
+    {
+        if (dataBlock.Data.Properties.ContainsKey(hero.ReferenceName))
+        {
+            var heroData = dataBlock.Data.GetSubCollection(hero.ReferenceName);
+            var modification = heroModifications.GetHeroModification(hero.ReferenceName);
+            ApplyHeroModifications(heroData, modification);
+            System.Console.WriteLine(hero.ReferenceName + " modified");
+        }
+    }
+
+    var kv3File = new KV3File(
+        dataBlock.Data,
+        encoding: KV3IDLookup.Get("text"),
+        format: KV3IDLookup.Get("generic")
+    );
+
+    var output = kv3File.ToString();
+    var outputPath = Path.Combine("generated", "heroes_modified.vdata");
+    File.WriteAllText(outputPath, output);
+}
+
+
+static KVValue DeepCopyKVValue(KVValue original)
+{
+    if (original.Value is KVObject originalObj)
+    {
+        var clonedObj = DeepCopyKVObject(originalObj);
+        return new KVValue(original.Type, clonedObj);
+    }
+    return new KVValue(original.Type, original.Value);
+}
+
+static KVObject DeepCopyKVObject(KVObject original)
+{
+    // Capacity constructor: KVObject(string name, int capacity)
+    var copy = new KVObject(null, original.Properties.Count);
+    foreach (var kvp in original.Properties)
+    {
+        copy.AddProperty(kvp.Key, DeepCopyKVValue(kvp.Value));
+    }
+    return copy;
+}
 
 static void ApplyHeroModifications(KVObject heroData, HeroModification modification)
 {
     var stats = heroData.GetSubCollection("m_mapStartingStats");
     var abilties = heroData.GetSubCollection("m_mapBoundAbilities");
     
-
-
+ 
     if (modification.MoveAcceleration.HasValue)
     {
         UpdateStat(stats, "EMoveAcceleration", modification.MoveAcceleration.Value, KVValueType.Int32);
@@ -100,10 +224,6 @@ static void UpdateStat(KVObject stats, string statName, object value, KVValueTyp
     var existingValue = stats.Properties[statName];
     stats.AddProperty(statName, new KVValue(valueType, existingValue.Flag, value));
 }
-
-
-
-
 
 public static class DirectoryHelper
 {
@@ -146,6 +266,7 @@ public class HeroModification
 {
     public string HeroName { get; set; }
     public string ReferenceName { get; set; }
+    public string CopyReferenceName => ReferenceName + "_copy";
     public decimal? Stamina { get; set; }
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
@@ -156,23 +277,8 @@ public class HeroModification
 
 public class HeroModificationCollection
 {
-    public List<HeroModification> NonImportantHeroes { get; set; }
-    public List<HeroModification> NicheUntouchedHeroes { get; set; }
-    public List<HeroModification> ImportantHeroes { get; set; }
-
-    public HashSet<string> GetHeroesReferences() =>
-        NonImportantHeroes
-            .Select(c => c.ReferenceName)
-            .Concat(NicheUntouchedHeroes.Select(c => c.ReferenceName))
-            .Concat(ImportantHeroes.Select(c => c.ReferenceName))
-            .ToHashSet();
-
-    public List<HeroModification> GetAllHeroModifications() =>
-        NonImportantHeroes
-            .Concat(NicheUntouchedHeroes)
-            .Concat(ImportantHeroes)
-            .ToList();
-
+    public List<HeroModification> Heroes { get; set; }
+ 
     public HeroModification GetHeroModification(string reference) =>
-        GetAllHeroModifications().First(c => c.ReferenceName == reference);
+        Heroes.First(c => c.ReferenceName == reference);
 }

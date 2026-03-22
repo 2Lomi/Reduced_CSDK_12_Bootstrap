@@ -38,13 +38,13 @@ heroes:
     heroId: 205
   - heroName: Abrams
     referenceName: hero_atlas
-    stamina: 0.999
+    stamina: 4
     staminaRegeneration: 222
     moveSpeed: 7.2
     heroId: 206
   - heroName: Mirage
     referenceName: hero_mirage
-    stamina: 0.999
+    stamina: 4
     staminaRegeneration: 222
     moveSpeed: 7.2
     heroId: 207

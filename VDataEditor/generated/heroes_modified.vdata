@@ -66289,7 +66289,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.999000
+			EStamina = 4.000000
 			EBaseHealthRegen = 1.500000
 			EStaminaRegenPerSecond = 222.000000
 			EAbilityResourceMax = 0
@@ -67396,7 +67396,7 @@
 			EReloadSpeed = 1
 			EWeaponPowerScale = 1
 			EProcBuildUpRateScale = 1
-			EStamina = 0.999000
+			EStamina = 4.000000
 			EBaseHealthRegen = 2.000000
 			EStaminaRegenPerSecond = 222.000000
 			EAbilityResourceMax = 0

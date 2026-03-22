@@ -1,3 +1,22 @@
+param(
+    [Parameter(Mandatory=$true)]
+    [ValidateSet("csdk", "deadlock")]
+    [string]$Target
+)
+
+Push-Location $PSScriptRoot
+
+Write-Host "Running VDataEditor addhero $Target..."
+dotnet run --project ".\VDataEditor\VDataEditor.csproj" -- addhero $Target
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "VDataEditor failed with exit code $LASTEXITCODE. Aborting."
+    exit $LASTEXITCODE
+}
+
+Write-Host "VDataEditor completed successfully."
+Write-Host ""
+ 
 <#
 
 Objective is simple : 
@@ -38,7 +57,7 @@ Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\generated\heroes_modif
 
 # ===== CONFIGURATION =====
 $InputFolder = "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap"  # Change this to your target folder
-$ResourceCompilerPath = " C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe"  # Full path if not in PATH
+$ResourceCompilerPath = "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe"  # Full path if not in PATH
 # ========================
 
 # Validate input folder exists
@@ -49,7 +68,7 @@ if (-not (Test-Path -Path $InputFolder -PathType Container)) {
 
 # Get all files in the folder, excluding .vmap and .vpk files
 $filesToCompile = Get-ChildItem -Path $InputFolder -File -Recurse | 
-    Where-Object { $_.Extension -ne ".vmap" -and $_.Extension -ne ".vpk"  -and $_.Extension -ne ".vpulse" -and $_.Extension -ne ".ron" }
+    Where-Object { $_.Extension -ne ".vmap" -and $_.Extension -ne ".vpk"  -and $_.Extension -ne ".vpulse" -and $_.Extension -ne ".ron"  -and $_.Extension -ne ".png"}
 
 if ($filesToCompile.Count -eq 0) {
     Write-Warning "No files found to compile (excluding .vmap and .vpk files)"
@@ -60,19 +79,38 @@ if ($filesToCompile.Count -eq 0) {
 $filesList = $filesToCompile.FullName -join ' '
 
 Write-Host "Found $($filesToCompile.Count) file(s) to compile"
-Write-Host "Executing: $ResourceCompilerPath -i $filesList"
+Write-Host "Executing: $ResourceCompilerPath -v -game C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel -i $filesList"
 Write-Host ""
 
-# Execute resourcecompiler with the files
-& $ResourceCompilerPath -game "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel" -i $filesList 
+foreach ($file in $filesToCompile) {
+    Write-Host "Compiling: $($file.FullName)"
+    
+    & $ResourceCompilerPath -game "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel" -i $file.FullName
 
-if ($LASTEXITCODE -ne 0) {
-    Write-Error "resourcecompiler.exe exited with code $LASTEXITCODE"
-    exit $LASTEXITCODE
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "Failed to compile: $($file.FullName) (exit code $LASTEXITCODE)"
+        $hasError = $true
+    }
+}
+
+if ($hasError) {
+    Write-Error "One or more files failed to compile."
+    exit 1
 }
 
 Write-Host ""
 Write-Host "Compilation completed successfully!"
+
+# # Execute resourcecompiler with the files
+# & $ResourceCompilerPath -v -game "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel" -i $filesList 
+
+# if ($LASTEXITCODE -ne 0) {
+#     Write-Error "resourcecompiler.exe exited with code $LASTEXITCODE"
+#     exit $LASTEXITCODE
+# }
+
+# Write-Host ""
+# Write-Host "Compilation completed successfully!"
   
 $wshell = New-Object -ComObject WScript.Shell
 

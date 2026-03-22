@@ -1,22 +1,26 @@
-Initial "read text wrongly placed"
+Add Velocity STOPs on all TPs
+        => Wall jump (bookworm)
+        => Corner Boost (Atlas & Mirage)
+
+Teleport sounds are broken. Repair => 
+        TP Air strafe out 
+        Wall jump out 
+        Corner boost out (+ Label)
 
 
+Long jump:
+        J'ai réussi à passer à travers les mailles du filet ?
+        
 
-1 to 7 in red
+AIR STRAFFE 
+        
 
-Jump 2 > 2nd panel need light  at its bottom right
-Jump 3 > 2nd panel need light  at its bottom right 
-Jump 3 > 3rd panel need light  at its bottom right
-        Moving towards the edge - while sliding it - means that you will slow down your fall a tiny bit more.
+Corner boost  
+        Jump 7 donut choose a darker material please  >>>
+     
+       
 
-Jump 4 > 1st panel need light   
-Jump 6 > 1st panel need light  
-         2nd panel need light  
-
-        >TEST START DISABLED ON TP TRIGGER !<
-            => If not working => Make multiple trigger slightly bigger and timer slightly longer ?               
-
-Jump 7 > 1st panel need light  
-        2nd panel has 1 space too much
-
- 
+beforelast jump
+        Add a perpendicular glass to prevent wall jump
+        Longer glass please
+        Add trigger on left/right walls

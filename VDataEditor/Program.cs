@@ -73,6 +73,7 @@ static async Task AddHeroDataAsync(string filePath)
         ApplyHeroModifications(clonedHero, mod);
     }
 
+    Directory.CreateDirectory(Path.GetDirectoryName(Paths.OutputFile)!);
     await File.WriteAllTextAsync(Paths.OutputFile, binaryKv.ToString());
    
 }
@@ -210,7 +211,7 @@ static class Paths
 
     public static readonly string Resources = Path.Combine(ProjectRoot, "resources");
     public static readonly string ConfigFile = Path.Combine(Resources, "heroesmodification.yaml");
-    public static readonly string OutputFile = Path.Combine("generated", "heroes_modified.vdata");
+    public static readonly string OutputFile = Path.Combine(ProjectRoot, "generated", "heroes_modified.vdata");
 
     public static readonly string DeadlockVpk =
         @"C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\pak01_dir.vpk";

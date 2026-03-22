@@ -66,7 +66,7 @@ static async Task AddHeroDataAsync(string filePath)
 
         Console.WriteLine($"Cloning hero: {mod.CopyReferenceName}");
 
-        var clone = DeepCopyKVValue(original);
+        var clone = KVDeepCopyExtensions.DeepClone(original);
         root.AddProperty(mod.CopyReferenceName, clone);
 
         var clonedHero = root.GetSubCollection(mod.CopyReferenceName);
@@ -74,8 +74,12 @@ static async Task AddHeroDataAsync(string filePath)
     }
 
     await File.WriteAllTextAsync(Paths.OutputFile, binaryKv.ToString());
+   
 }
+ 
+ 
 
+    
 static void ApplyHeroModifications(KVObject heroData, HeroModification mod)
 {
     var stats = heroData.GetSubCollection("m_mapStartingStats");
@@ -130,23 +134,6 @@ static HeroModificationCollection LoadHeroModifications()
     return deserializer.Deserialize<HeroModificationCollection>(yaml);
 }
 
-static KVValue DeepCopyKVValue(KVValue original)
-{    
-    if (original.Value is KVObject obj)
-        return new KVValue(original.Type, DeepCopyKVObject(obj));
-    
-    return new KVValue(original.Type, original.Value);
-}
-
-static KVObject DeepCopyKVObject(KVObject original)
-{
-    var copy = new KVObject(null, original.Properties.Count);
-
-    foreach (var kv in original.Properties)
-        copy.AddProperty(kv.Key, DeepCopyKVValue(kv.Value));
-
-    return copy;
-}
 
 static void PrintUsage()
 {
@@ -236,4 +223,69 @@ static class Paths
 
     public static readonly string ExtractorExe =
         @"C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\cli-windows-x64\Source2Viewer-CLI.exe";
+}
+
+
+
+
+public static class KVDeepCopyExtensions
+{
+    /// <summary>
+    /// Creates a deep copy of a KVValue.
+    /// </summary>
+    public static KVValue DeepClone(this KVValue kvValue)
+    {
+        if (kvValue.Value == null)
+        {
+            return new KVValue(kvValue.Type, kvValue.Flag, null);
+        }
+
+        // Recursively deep copy if the value is a KVObject
+        if (kvValue.Value is KVObject kvObject)
+        {
+            return new KVValue(kvValue.Type, kvValue.Flag, kvObject.DeepClone());
+        }
+
+        // If the value is a byte array (BinaryBlob), duplicate the array
+        if (kvValue.Value is byte[] byteArray)
+        {
+            var newArray = new byte[byteArray.Length];
+            Buffer.BlockCopy(byteArray, 0, newArray, 0, byteArray.Length);
+            return new KVValue(kvValue.Type, kvValue.Flag, newArray);
+        }
+
+        // For all other types (strings, ints, floats, booleans), they are 
+        // either value types or immutable reference types, so it's safe to just pass the value.
+        return new KVValue(kvValue.Type, kvValue.Flag, kvValue.Value);
+    }
+
+    /// <summary>
+    /// Creates a deep copy of a KVObject.
+    /// </summary>
+    public static KVObject DeepClone(this KVObject source)
+    {
+        if (source == null)
+        {
+            return null;
+        }
+
+        // Initialize a new KVObject with the same Key, IsArray flag, and capacity
+        var clone = new KVObject(source.Key, source.IsArray, source.Count);
+
+        foreach (var kvp in source.Properties)
+        {
+            // KVObject.AddProperty handles IsArray logic internally by making up string keys based on Count.
+            // We just pass null for the key if it's an array, or the original key if it's a standard object.
+            if (source.IsArray)
+            {
+                clone.AddProperty(null, kvp.Value.DeepClone());
+            }
+            else
+            {
+                clone.AddProperty(kvp.Key, kvp.Value.DeepClone());
+            }
+        }
+
+        return clone;
+    }
 }

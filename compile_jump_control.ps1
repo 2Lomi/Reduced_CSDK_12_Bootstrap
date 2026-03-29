@@ -17,43 +17,14 @@
 # Write-Host "VDataEditor completed successfully."
 # Write-Host ""
  
-<#
-
-Objective is simple : 
-
-PREEXISTING CONTENT FOLDERS 
-jumping_map_map (map) | jumping_map_script (vdata/vpulse)
-
-
->Compile folder 1 map (.vpk)
->Move modified heroes.vdata from VDataEditor Project to jumping_map_script CONTENT
->Move compiled vpk map to jumping_map_script GAME folder
->Compile jumping_map_script (vdata/vpulse)
->Package jumping_map_script (containing vdata_c compiled & map vpk)  directly into game/addons folder
-
- 
-<#backup#>
+  
+  
 Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jump_control\maps\jump_control.vmap" "C:\Repos\Reduced_CSDK_12_Bootstrap\mapOutput"
-
-#fast compile
+ 
 C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jump_control\maps\jump_control.vmap" -noassert -world -nolightmaps  -phys -nav -retail -breakpad -nop4 -outroot  "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
-#Full compile
-#C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads  -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -bakelighting -lightmapMaxResolution 1024 -lightmapDoWeld -lightmapVRadQuality 1 -vrad3LargeBlockSize -lightmapLocalCompile -phys -vis -nav -gridnav -sareverb -sareverb_threads  -sapaths -sareverb_threads  -retail -breakpad -nop4 -outroot "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
-
-# It actually works. Hot damn. But then compilation is so long it makes testing workflow a bit more painful.
-# I'll stick with @mrtoastie  method
-
-#final compile
-#C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe -threads  -fshallow -maxtextureres 256 -dxlevel 110 -quiet -unbufferedio -i "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jumpmap\maps\jump_school.vmap" -noassert -world -bakelighting -lightmapMaxResolution 2048 -lightmapDoWeld -lightmapVRadQuality 2 -vrad3LargeBlockSize -lightmapLocalCompile -phys -vis -nav -sareverb -sareverb_threads  -sapaths -sareverb_threads  -retail -breakpad -nop4 -outroot "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game"
-
- 
-#Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\generated\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jump_control\scripts\heroes.vdata" -Force
- 
- 
-
-# PowerShell script to compile resource files using resourcecompiler.exe
-# Excludes .vmap and .vpk files
-
+    
+Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\VDataEditor\generated\heroes_modified.vdata" "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jump_control\scripts\heroes.vdata" -Force
+  
 # ===== CONFIGURATION =====
 $InputFolder = "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\content\citadel_addons\jump_control"  # Change this to your target folder
 $ResourceCompilerPath = "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin_cs2\win64\resourcecompiler.exe"  # Full path if not in PATH
@@ -61,7 +32,7 @@ $ResourceCompilerPath = "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_
 
 # Validate input folder exists
 if (-not (Test-Path -Path $InputFolder -PathType Container)) {
-    Write-Error "Input folder does not exist: $InputFolder"
+    Write-Error "Input folder does not exist: $InputFolder"(TODO: Hammer clipboard data on the system clipboard.)
     exit 1
 }
 
@@ -99,18 +70,7 @@ if ($hasError) {
 
 Write-Host ""
 Write-Host "Compilation completed successfully!"
-
-# # Execute resourcecompiler with the files
-# & $ResourceCompilerPath -v -game "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel" -i $filesList 
-
-# if ($LASTEXITCODE -ne 0) {
-#     Write-Error "resourcecompiler.exe exited with code $LASTEXITCODE"
-#     exit $LASTEXITCODE
-# }
-
-# Write-Host ""
-# Write-Host "Compilation completed successfully!"
-  
+ 
 $wshell = New-Object -ComObject WScript.Shell
 
 $proc = Start-Process "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\bin\win64\CSDKCfgVPK.exe" `
@@ -124,7 +84,7 @@ $wshell.AppActivate($proc.Id)
 $wshell.SendKeys("{ENTER}")
 
  
-Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\addons\pak01_dir.vpk" "C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\addons" -Force
+Copy-Item "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel\addons\pak01_dir.vpk" "C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\addons\pak01_dir.vpk" -Force
 
 
 # Get-Process -Name "deadlock" -ErrorAction SilentlyContinue | Stop-Process -Force

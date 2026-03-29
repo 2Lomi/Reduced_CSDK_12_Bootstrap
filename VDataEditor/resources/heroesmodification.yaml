@@ -48,3 +48,9 @@ heroes:
     staminaRegeneration: 222
     moveSpeed: 7.2
     heroId: 207
+  - heroName: Doorman
+    referenceName: hero_doorman
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    heroId: 208

@@ -100,17 +100,7 @@ if ($hasError) {
 
 Write-Host ""
 Write-Host "Compilation completed successfully!"
-
-# # Execute resourcecompiler with the files
-# & $ResourceCompilerPath -v -game "C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\Reduced_CSDK_12\game\citadel" -i $filesList 
-
-# if ($LASTEXITCODE -ne 0) {
-#     Write-Error "resourcecompiler.exe exited with code $LASTEXITCODE"
-#     exit $LASTEXITCODE
-# }
-
-# Write-Host ""
-# Write-Host "Compilation completed successfully!"
+ 
   
 $wshell = New-Object -ComObject WScript.Shell
 

@@ -1,0 +1,122 @@
+
+
+Global : 
+- Is it clear where to go from a single glance ? 
+- Green Ending block
+- TP to the next Jump at the end of each jump
+- Disableable Colored path + World text for each jumps
+- aziz lumière bordel
+- Velocity reset to 0 for each TP trigger
+- Decide on coloring logic ? 
+    - Corner Boost location
+    - Wall jump location
+    - Arrow to show the path
+    - Starting location
+    - Avoid location
+    - Global external Walls
+
+Jump1 :
+    - Too short on last wall jump due to air control too big on official deadlock 
+        - Move it backward about 1/3 of the way back
+        - Force Wall jump at the lower end of 2nd wall jump ?
+    - Shadow are messing it up a bit
+    - Unclear where to go ? need arrow ?
+    - Block final path
+    - Red glass required (respawn too)
+    - Color are constrating good
+
+Jump2 :
+    - Glass is clipping onto the block at the start
+    - Too dark overall
+    - You can accidentally corner boost ontop of the hidden mesh on 1st wall jump
+    - Feel a bit harder than usual ? Wall jump changes ? Final one is a bit far somehow
+
+Jump3 :
+    - Increase a little bit the length of the start platform to avoid weird annoying camera behavior
+    - Shadow is weird
+    - Middle pillar textures is weird ?? Unaligned ?
+
+Jump 4:
+    - Red walls to signify respawnable walls
+
+
+Jump 5:
+    - Glass thinner please
+    - Make it cleaner around (close up the rectangle)
+
+Jump 6
+    - Unclear where to go
+    - Block the way back
+    - Respawnable window touching
+    - Red glass
+    - Check brick wall, it's going out in one place in the final corner
+
+Jump 7
+    - Ugly shit
+    - Too dark (shadow + dark messes everything, unreadable)
+    - Disallow Wall jump on first block
+    - First block can go a little more to the left to signify wall jump
+    - Respawnable corner boost
+    - Glass instead of blocks to show where to go.
+    - Red glass only standable part of the map
+    - Thinner walls too please
+    - Increase a little bit the length of the start platform to avoid weird annoying camera behavior
+    
+Jump 8 
+    - Respawnable corner boost
+    - Should probably reduce size of the corner boost block to avoid frustration of hitting the glass and signify what's the required distance from initial wall jump
+    - Glass for the around blocks please
+    - Unclear where to go
+
+Jump 9
+    - Clearer glass would be nice to have ?
+    - Missing reset TP at the floor
+    - Make a pentagon instead of this ugly one side glass shape
+
+Jump 10
+    - Pretty cool alright
+
+Jump 11
+    - Unclear where to go
+    - Glass is way too transparent, impossible to see in the final stretch
+    - Reduce the size of the overall level
+    - Respawnable corner boost
+
+Jump 12
+    - There's an edge you can stand on during the 1 first drop down before the dash
+    - Last wall jump should be impossible to stand on
+    - Wall should not clip inside the glass tube
+    - Arrow around the tube ?
+
+Jump 13
+    - Unclear where to go.
+    - Corner boost is invisible legit
+    - Too simple ? Not restrictive enough ?
+    - Make 2nd wall jump higher ? At least not standable
+
+Jump 14
+    - Missing all the TPs everywhere
+    - Colors bro, what the hell
+    - RETEST when TP are setup
+
+Jump 15
+    - Unclear where to go.   => More transparent glass with arrow showing the way ?
+
+Jump 16
+    - Missing TPs
+    - Respawnable corner boost 
+
+Jump 17
+    - Show the first Wall jumpable wall to help the player
+    - Can I try to prevent the dash jump at the start ? Smaller start platform ?
+    - But still have the camera no jerking around
+    - Respawnable corner boost
+
+Jump 18
+    - Make edges unstandable/respawnable ?
+    
+Jump 19 :
+    - Double Respawnable corner boost
+ 
+Jump 20 :
+    - Make everything clearer, the 2nd wall jump feels invisible

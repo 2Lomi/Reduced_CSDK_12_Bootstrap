@@ -16,95 +16,73 @@ Global :
     - Global external Walls
 
 Jump1 :
-    - Too short on last wall jump due to air control too big on official deadlock 
-        - Move it backward about 1/3 of the way back
-        - Force Wall jump at the lower end of 2nd wall jump ?
-    - Shadow are messing it up a bit
-    - Unclear where to go ? need arrow ?
-    - Block final path
-    - Red glass required (respawn too)
-    - Color are constrating good
+    - To Test => STILL TOO SHORT ?!  
+        => Actual version too hard => Bonus jump 2
+        => rapprocher : La moitié du bloc juste avant la glass
+        
 
-Jump2 :
-    - Glass is clipping onto the block at the start
-    - Too dark overall
-    - You can accidentally corner boost ontop of the hidden mesh on 1st wall jump
-    - Feel a bit harder than usual ? Wall jump changes ? Final one is a bit far somehow
+Jump2 : OK
 
-Jump3 :
-    - Increase a little bit the length of the start platform to avoid weird annoying camera behavior
-    - Shadow is weird
-    - Middle pillar textures is weird ?? Unaligned ?
+Jump3 :  ok!
 
-Jump 4:
-    - Red walls to signify respawnable walls
+Jump 4: ok !
 
+Jump 5:  ok !
 
-Jump 5:
-    - Glass thinner please
-    - Make it cleaner around (close up the rectangle)
+Jump 6: ok !
 
-Jump 6
-    - Unclear where to go
-    - Block the way back
-    - Respawnable window touching
-    - Red glass
-    - Check brick wall, it's going out in one place in the final corner
-
-Jump 7
-    - Ugly shit
-    - Too dark (shadow + dark messes everything, unreadable)
-    - Disallow Wall jump on first block
-    - First block can go a little more to the left to signify wall jump
-    - Respawnable corner boost
-    - Glass instead of blocks to show where to go.
-    - Red glass only standable part of the map
-    - Thinner walls too please
-    - Increase a little bit the length of the start platform to avoid weird annoying camera behavior
+Jump 7: 
+    - Respawnable corner boost   
     
-Jump 8 
-    - Respawnable corner boost
-    - Should probably reduce size of the corner boost block to avoid frustration of hitting the glass and signify what's the required distance from initial wall jump
-    - Glass for the around blocks please
-    - Unclear where to go
+Jump 8  
+    - Respawnable corner boost   
+    - Weird shadow on the glass feels weird ? A fixer plus tard
 
-Jump 9
-    - Clearer glass would be nice to have ?
-    - Missing reset TP at the floor
-    - Make a pentagon instead of this ugly one side glass shape
+Jump 9: ok!
 
-Jump 10
-    - Pretty cool alright
+Jump 10: ok !
 
 Jump 11
-    - Unclear where to go
-    - Glass is way too transparent, impossible to see in the final stretch
-    - Reduce the size of the overall level
-    - Respawnable corner boost
+    - TO TEST
+    - Change floor textures absolutely
+    - wall textures
+    - Bridge to the middle of the weird glass part for review
+    - First glass wall back to solid structure
+    - Spawn platform glass into one single mesh + slimmer glass walls
+    - Remove shadow on first wall jump before changing texture !
+    - Align textures ?
 
 Jump 12
-    - There's an edge you can stand on during the 1 first drop down before the dash
-    - Last wall jump should be impossible to stand on
-    - Wall should not clip inside the glass tube
-    - Arrow around the tube ?
+    - Repasser dessus ...? Remove the dash toward the outside 
+    - Block (with glass) the passage towards the ending
+    - Bigger blue light to indicate passage
+    
 
 Jump 13
-    - Unclear where to go.
-    - Corner boost is invisible legit
-    - Too simple ? Not restrictive enough ?
-    - Make 2nd wall jump higher ? At least not standable
+    - Glass too red
+    - Ending not clear (Need green visible from spawn)
+    - More blue light for first corner boost 
+    - Missing solution label : 
+        - Corner boost
+        - wall jump
+        - Air Jump
+        - Air dash
+        - Wall jump
+        - Heavy melee
 
 Jump 14
-    - Missing all the TPs everywhere
-    - Colors bro, what the hell
-    - RETEST when TP are setup
+    - Plafond noir ?
+    - All tp are not working except first and last...
+    - Missing red at the bottom of the pit
+    - Missing texture et light for wall jump
+
 
 Jump 15
-    - Unclear where to go.   => More transparent glass with arrow showing the way ?
+    - Weird shadow at the bottom of the first red wall (et derrière aussi)
 
-Jump 16
-    - Missing TPs
-    - Respawnable corner boost 
+Jump 16 
+    - TO TEST
+
 
 Jump 17
     - Show the first Wall jumpable wall to help the player

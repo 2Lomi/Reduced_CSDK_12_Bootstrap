@@ -104,6 +104,18 @@ static void ApplyHeroModifications(KVObject heroData, HeroModification mod)
     if (mod.Stamina.HasValue)
         UpdateStat(stats, "EStamina", (double)mod.Stamina.Value, KVValueType.FloatingPoint64);
 
+    if (mod.AirDashDistance.HasValue)
+        UpdateStat(stats, "EAirDashDistanceInMeters", (double)mod.AirDashDistance.Value, KVValueType.FloatingPoint64);
+    
+    if (mod.AirDashDuration.HasValue)
+        UpdateStat(stats, "EAirDashDuration", (double)mod.AirDashDuration.Value, KVValueType.FloatingPoint64);
+    
+    if (mod.GroundDashDistance.HasValue)
+        UpdateStat(stats, "EGroundDashDistanceInMeters", (double)mod.GroundDashDistance.Value, KVValueType.FloatingPoint64);
+    
+    if (mod.GroundDashDuration.HasValue)
+        UpdateStat(stats, "EGroundDashDuration", (double)mod.GroundDashDuration.Value, KVValueType.FloatingPoint64);
+
     if (mod.StaminaRegeneration.HasValue)
         UpdateStat(stats, "EStaminaRegenPerSecond", (double)mod.StaminaRegeneration.Value, KVValueType.FloatingPoint64);
 
@@ -154,6 +166,10 @@ public class HeroModification
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
     public int? MoveAcceleration { get; set; }
+    public decimal? GroundDashDistance { get; set; }
+    public decimal? GroundDashDuration { get; set; }
+    public decimal? AirDashDistance { get; set; }
+    public decimal? AirDashDuration { get; set; }
 
     public bool? RemoveHeavyMelee { get; set; }
     public bool? RemoveJump { get; set; }

@@ -1,56 +1,302 @@
 heroes:
-  - heroName: ladygeist
-    referenceName: hero_ghost
-    stamina: 4
-    staminaRegeneration: 222
-    moveSpeed: 7.2
-    moveAcceleration: 4
-    heroId: 201
-  - heroName: Paige
-    referenceName: hero_bookworm
-    stamina: 4
-    staminaRegeneration: 222
-    moveSpeed: 7.2
-    moveAcceleration: 4
-    heroId: 202
-  - heroName: Seven
-    referenceName: hero_gigawatt
-    stamina: 0
-    staminaRegeneration: 0.001
-    removeHeavyMelee: true
-    moveSpeed: 7.2
-    moveAcceleration: 4
-    heroId: 203
-  - heroName: Victor
-    referenceName: hero_frank
-    stamina: 0
-    removeJump: true
-    removeHeavyMelee: true
-    staminaRegeneration: 0.001
-    moveSpeed: 7.2
-    moveAcceleration: 4 
-    heroId: 204
-  - heroName: Yamato
-    referenceName: hero_yamato
-    stamina: 0.1
-    staminaRegeneration: 0.001
-    moveSpeed: 7.2
-    heroId: 205
-  - heroName: Abrams
-    referenceName: hero_atlas
-    stamina: 4
-    staminaRegeneration: 222
-    moveSpeed: 7.2
-    heroId: 206
-  - heroName: Mirage
-    referenceName: hero_mirage
-    stamina: 4
-    staminaRegeneration: 222
-    moveSpeed: 7.2
-    heroId: 207
   - heroName: Doorman
     referenceName: hero_doorman
     stamina: 4
     staminaRegeneration: 222
     moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 201
+  - heroName: Punkgoat
+    referenceName: hero_punkgoat
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 203
+  - heroName: Drifter
+    referenceName: hero_drifter
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 204
+  - heroName: Inferno
+    referenceName: hero_inferno
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 206
+  - heroName: Lash
+    referenceName: hero_lash
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 207
+  - heroName: Engineer
+    referenceName: hero_engineer
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
     heroId: 208
+  - heroName: Mirage
+    referenceName: hero_mirage
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 228
+  - heroName: Bookworm
+    referenceName: hero_bookworm
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 209
+  - heroName: Synth
+    referenceName: hero_synth
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 210
+  - heroName: Gigawatt
+    referenceName: hero_gigawatt
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 212
+  
+  - heroName: Magician
+    referenceName: hero_magician
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 214
+  - heroName: Hornet
+    referenceName: hero_hornet
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 215
+  - heroName: Viscous
+    referenceName: hero_viscous
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 216
+  - heroName: Viper
+    referenceName: hero_viper
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 217
+  - heroName: Yamato
+    referenceName: hero_yamato
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 218
+  - heroName: Atlas
+    referenceName: hero_atlas
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 219
+  - heroName: Bebop
+    referenceName: hero_bebop
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 230
+  - heroName: Kelvin
+    referenceName: hero_kelvin
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 220
+  - heroName: Sumo
+    referenceName: hero_sumo
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 229
+  - heroName: Ghost
+    referenceName: hero_ghost
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 221
+  - heroName: Krill
+    referenceName: hero_krill
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 222
+  - heroName: Shiv
+    referenceName: hero_shiv
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 223
+  - heroName: Frank
+    referenceName: hero_frank
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 225
+  - heroName: Wraith
+    referenceName: hero_wraith
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 226
+  - heroName: Warden
+    referenceName: hero_warden
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 227
+  - heroName: Priest
+    referenceName: hero_priest
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 224
+  - heroName: Fencer
+    referenceName: hero_fencer
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 202
+  - heroName: Necro
+    referenceName: hero_necro
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 205
+  - heroName: Familiar
+    referenceName: hero_familiar
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 211
+  - heroName: Werewolf
+    referenceName: hero_werewolf
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 213

@@ -300,3 +300,64 @@ heroes:
     airDashDistance: 8.0
     airDashDuration: 0.43
     heroId: 213
+
+  - heroName: greytalon
+    referenceName: hero_orion
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 250
+  - heroName: Haze
+    referenceName: hero_haze
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 251
+  - heroName: Holliday
+    referenceName: hero_astro
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 252
+  - heroName: ivy
+    referenceName: hero_tengu
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 253
+  - heroName: Mina
+    referenceName: hero_vampirebat
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 254
+  - heroName: Paradox
+    referenceName: hero_chrono
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.62
+    airDashDistance: 8.0
+    airDashDuration: 0.43
+    heroId: 255

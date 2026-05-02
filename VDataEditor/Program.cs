@@ -10,13 +10,22 @@ using KVObject = ValveResourceFormat.Serialization.KeyValues.KVObject;
 using KVValue = ValveResourceFormat.Serialization.KeyValues.KVValue;
 
 
-if (args.Length != 2 || args[0] != "addhero")
+if (args.Length == 1 && args[0] == "addSky")
+{
+    await AddSkyAsync();
+    return;
+}
+
+if (args.Length != 2)
 {
     PrintUsage();
     return;
 }
 
-switch (args[1])
+string sdk = args[0];
+string map = args[1];
+
+switch (sdk)
 {
     case "deadlock":
         await ExtractHeroes(Paths.DeadlockVpk);
@@ -31,7 +40,14 @@ switch (args[1])
         return;
 }
 
-await AddHeroDataAsync(Paths.ExtractedHeroes);
+string? configFile = Paths.GetConfigFile(map);
+if (configFile == null)
+{
+    PrintUsage();
+    return;
+}
+
+await AddHeroDataAsync(Paths.ExtractedHeroes, configFile, map);
 
 
 
@@ -45,9 +61,127 @@ static async Task ExtractHeroes(string inputPath)
         await process.WaitForExitAsync();
 }
 
-static async Task AddHeroDataAsync(string filePath)
+static async Task AddSkyAsync()
 {
-    var heroMods = LoadHeroModifications();
+    using var resource = new Resource();
+    using var stream = new FileStream(Paths.ExtractedHeroes, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+    resource.Read(stream, verifyFileSize: false);
+
+    if (resource.DataBlock is not BinaryKV3 binaryKv)
+        return;
+
+    var root = binaryKv.Data;
+
+    foreach (string mapName in new[] { "jumpschool", "jumpcontrol" })
+    {
+        string configFile = Paths.GetConfigFile(mapName)!;
+        var heroMods = LoadHeroModifications(configFile);
+
+        foreach (var mod in heroMods.Heroes ?? Enumerable.Empty<HeroModification>())
+        {
+            if (!root.Properties.TryGetValue(mod.ReferenceName, out var original))
+                continue;
+
+            string copyName = $"{mod.ReferenceName}_copy_{mapName}";
+            Console.WriteLine($"Cloning hero: {copyName}");
+
+            var clone = KVDeepCopyExtensions.DeepClone(original);
+            root.AddProperty(copyName, clone);
+
+            var clonedHero = root.GetSubCollection(copyName);
+            ApplyHeroModifications(clonedHero, mod);
+        }
+    }
+
+    string outputText = RemoveHeroBlock(binaryKv.ToString(), "hero_pk_runner");
+
+    string skyrunnerBlock = ExtractSkyrunnerBlock(Paths.SkyHeroes);
+    if (!string.IsNullOrEmpty(skyrunnerBlock))
+    {
+        int lastBrace = outputText.LastIndexOf('}');
+        outputText = outputText.Substring(0, lastBrace)
+            + "\thero_pk_runner = \n" + skyrunnerBlock + "\n}";
+    }
+
+    Directory.CreateDirectory(Path.GetDirectoryName(Paths.OutputFile)!);
+    await File.WriteAllTextAsync(Paths.OutputFile, outputText);
+}
+
+static string RemoveHeroBlock(string text, string heroName)
+{
+    var lines = text.Split('\n');
+    var result = new System.Text.StringBuilder();
+    int i = 0;
+
+    while (i < lines.Length)
+    {
+        string trimmed = lines[i].TrimStart();
+        if (trimmed.StartsWith(heroName) && trimmed.Contains('='))
+        {
+            i++; // skip the "heroName = " line
+            // skip until we consume the full block
+            int depth = 0;
+            bool started = false;
+            while (i < lines.Length)
+            {
+                foreach (char c in lines[i]) { if (c == '{') depth++; else if (c == '}') depth--; }
+                if (!started && depth > 0) started = true;
+                i++;
+                if (started && depth == 0) break;
+            }
+        }
+        else
+        {
+            result.Append(lines[i]);
+            if (i < lines.Length - 1) result.Append('\n');
+            i++;
+        }
+    }
+
+    return result.ToString();
+}
+
+static string ExtractSkyrunnerBlock(string skyHeroesPath)
+{
+    var lines = File.ReadAllLines(skyHeroesPath);
+    int startLine = -1;
+
+    for (int i = 0; i < lines.Length; i++)
+    {
+        if (lines[i].TrimStart().StartsWith("hero_pk_runner"))
+        {
+            startLine = i + 1; // line with opening '{'
+            break;
+        }
+    }
+
+    if (startLine < 0 || startLine >= lines.Length)
+        return string.Empty;
+
+    var sb = new System.Text.StringBuilder();
+    int depth = 0;
+    bool started = false;
+
+    for (int i = startLine; i < lines.Length; i++)
+    {
+        string line = lines[i];
+        foreach (char c in line) { if (c == '{') depth++; else if (c == '}') depth--; }
+
+        if (!started && depth > 0) started = true;
+
+        if (started)
+            sb.AppendLine('\t' + line.TrimStart());
+
+        if (started && depth == 0)
+            break;
+    }
+
+    return sb.ToString().TrimEnd();
+}
+
+static async Task AddHeroDataAsync(string filePath, string configFile, string map)
+{
+    var heroMods = LoadHeroModifications(configFile);
 
     using var resource = new Resource();
     using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -64,12 +198,13 @@ static async Task AddHeroDataAsync(string filePath)
         if (!root.Properties.TryGetValue(mod.ReferenceName, out var original))
             continue;
 
-        Console.WriteLine($"Cloning hero: {mod.CopyReferenceName}");
+        string copyName = $"{mod.ReferenceName}_copy_{map}";
+        Console.WriteLine($"Cloning hero: {copyName}");
 
         var clone = KVDeepCopyExtensions.DeepClone(original);
-        root.AddProperty(mod.CopyReferenceName, clone);
+        root.AddProperty(copyName, clone);
 
-        var clonedHero = root.GetSubCollection(mod.CopyReferenceName);
+        var clonedHero = root.GetSubCollection(copyName);
         ApplyHeroModifications(clonedHero, mod);
     }
 
@@ -137,13 +272,13 @@ static void UpdateStat(KVObject container, string key, object value, KVValueType
     container.AddProperty(key, new KVValue(type, existing.Flag, value));
 }
 
-static HeroModificationCollection LoadHeroModifications()
+static HeroModificationCollection LoadHeroModifications(string configFile)
 {
     var deserializer = new DeserializerBuilder()
         .WithNamingConvention(CamelCaseNamingConvention.Instance)
         .Build();
 
-    var yaml = File.ReadAllText(Paths.ConfigFile);
+    var yaml = File.ReadAllText(configFile);
     return deserializer.Deserialize<HeroModificationCollection>(yaml);
 }
 
@@ -151,8 +286,11 @@ static HeroModificationCollection LoadHeroModifications()
 static void PrintUsage()
 {
     Console.WriteLine("Usage:");
-    Console.WriteLine("  dotnet run addhero deadlock");
-    Console.WriteLine("  dotnet run addhero csdk");
+    Console.WriteLine("  dotnet run csdk jumpcontrol");
+    Console.WriteLine("  dotnet run csdk jumpschool");
+    Console.WriteLine("  dotnet run deadlock jumpcontrol");
+    Console.WriteLine("  dotnet run deadlock jumpschool");
+    Console.WriteLine("  dotnet run addSky");
 }
 
 public class HeroModification
@@ -160,9 +298,7 @@ public class HeroModification
     public required string HeroName { get; set; }
     public required string ReferenceName { get; set; }
 
-    public string CopyReferenceName => $"{ReferenceName}_copy";
-
-    public decimal? Stamina { get; set; }
+public decimal? Stamina { get; set; }
     public decimal? StaminaRegeneration { get; set; }
     public decimal? MoveSpeed { get; set; }
     public int? MoveAcceleration { get; set; }
@@ -226,8 +362,14 @@ static class Paths
     public static readonly string ProjectRoot = DirectoryHelper.FindSingletonProjectRoot();
 
     public static readonly string Resources = Path.Combine(ProjectRoot, "resources");
-    public static readonly string ConfigFile = Path.Combine(Resources, "heroesmodification.yaml");
     public static readonly string OutputFile = Path.Combine(ProjectRoot, "generated", "heroes_modified.vdata");
+
+    public static string? GetConfigFile(string map) => map switch
+    {
+        "jumpcontrol" => Path.Combine(Resources, "heroesmodification_jumpcontrol.yaml"),
+        "jumpschool"  => Path.Combine(Resources, "heroesmodification_jumpschool.yaml"),
+        _             => null
+    };
 
     public static readonly string DeadlockVpk =
         @"C:\Program Files (x86)\Steam\steamapps\common\Deadlock\game\citadel\pak01_dir.vpk";
@@ -240,6 +382,9 @@ static class Paths
 
     public static readonly string ExtractorExe =
         @"C:\Repos\Reduced_CSDK_12_Bootstrap\ConsoleApp1\cli-windows-x64\Source2Viewer-CLI.exe";
+
+    public static readonly string SkyHeroes =
+        Path.Combine(Resources, "sky_heroes.vdata");
 }
 
 

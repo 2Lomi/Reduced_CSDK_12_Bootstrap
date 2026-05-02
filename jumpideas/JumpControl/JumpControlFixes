@@ -1,0 +1,17 @@
+Overall reduced all time window for corner boost cheating protection.
+
+Made the map server-dedicated/multiplayer friendly
+Removed "skip" on jump 3
+Removed skip on jump 13
+Removed skip on jump 14
+Jump 16 last platform is now slightly harder to reach to prevent dash jump abuse (Jump difficulty remains the same for normal)
+Jump 17 reduced starting platform size to prevent dash jump abuse
+Jump 17 made the last platform slightly farther
+Jump 19 is slightly harder (A rework is planned to make it actually hard, promise ...)
+
+
+
+
+
+
+Timer label in hub

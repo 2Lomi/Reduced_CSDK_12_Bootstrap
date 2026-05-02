@@ -1,0 +1,79 @@
+heroes:
+#long jump
+  - heroName: ghost
+    referenceName: hero_ghost
+    stamina: 4
+    moveAcceleration: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.700000
+    airDashDistance: 8.0
+    airDashDuration: 0.49
+    heroId: 300
+
+#wall jump
+  - heroName: bookworm
+    referenceName: hero_bookworm
+    stamina: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.68
+    airDashDistance: 8.0
+    airDashDuration: 0.47
+    moveAcceleration: 4
+    heroId: 301
+
+#air strafe
+  - heroName: Yamato
+    referenceName: hero_yamato
+    stamina: 0
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+    heroId: 310
+
+  - heroName: Seven
+    referenceName: hero_gigawatt
+    stamina: 0
+    staminaRegeneration: 0.001
+    removeHeavyMelee: true
+    moveSpeed: 7.2
+    moveAcceleration: 4
+    heroId: 311
+
+  - heroName: Victor
+    referenceName: hero_frank
+    stamina: 0
+    removeJump: true
+    removeHeavyMelee: true
+    staminaRegeneration: 0.001
+    moveSpeed: 7.2
+    moveAcceleration: 4
+    heroId: 312
+
+#Corner boost
+  - heroName: Abrams
+    referenceName: hero_atlas
+    stamina: 4
+    moveAcceleration: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.700000
+    airDashDistance: 8.0
+    airDashDuration: 0.49
+    heroId: 313
+
+  - heroName: Mirage
+    referenceName: hero_mirage
+    stamina: 4
+    moveAcceleration: 4
+    staminaRegeneration: 222
+    moveSpeed: 7.2
+    groundDashDistance: 10.0
+    groundDashDuration: 0.700000
+    airDashDistance: 8.0
+    airDashDuration: 0.49
+    heroId: 314
